@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Collaboro"
+             x:Class="Collaboro.HomePage">
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="Navy">
+            <StackLayout.BindingContext>
+                <local:ViewModel />
+            </StackLayout.BindingContext>
+            
+            <Label Text="Main Page" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button Text="Show Detail View" Command="{Binding FindTeamButtonClick}">
+            </Button>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

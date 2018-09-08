@@ -9,16 +9,36 @@ namespace Collaboro
 {
     public partial class App : Application
     {
+
+        // Initialise Variables
+        private ContentPage homePage;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new Collaboro.MainPage();
+            //MainPage = new Collaboro.MainPage();
+
+            // To be implemented properly once login is sorted
+            string user = "Tony";       // Temporary- for testing only
+            
+            if (user == null)
+            {
+                MainPage = new Collaboro.MainPage();
+            }
+            else
+            {
+                homePage = new Collaboro.HomePage();
+                MainPage = new NavigationPage(homePage);
+                PageNavigationManager.Instance.Navigation = MainPage.Navigation;
+            }
+             
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+            
         }
 
         protected override void OnSleep()

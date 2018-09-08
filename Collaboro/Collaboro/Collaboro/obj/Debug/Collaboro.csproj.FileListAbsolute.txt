@@ -1,0 +1,34 @@
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.App.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.MainPage.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.HomePage.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.FindTeam.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\Assignments\Assignment 2\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojResolveAssemblyReference.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojResolveAssemblyReference.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.MainPage.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.App.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.HomePage.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.FindTeam.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.pdb
