@@ -4,14 +4,60 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.HomePage">
     <ContentPage.Content>
-        
-        <StackLayout BackgroundColor="Navy">
+
+        <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
             
-            <Label Text="Main Page" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Button Text="Show Detail View" Command="{Binding FindTeamButtonClick}">
+            <Label Text="Collaboro" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Start" 
+                   FontSize="30"
+                   TextColor="Black"/>
+            
+            <Button Text="Find Team" 
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    Command="{Binding FindTeamButtonClick}">
+            </Button>
+
+            <Button Text="Book Meeting" 
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    Command="{Binding BookMeetingClick}">
+            </Button>
+            
+            <Button Text="Availability" 
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    Command="{Binding BookMeetingClick}">
+            </Button>
+            
+            <Button Text="Profile" 
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontSize="20"
+                    Command="{Binding BookMeetingClick}">
             </Button>
         </StackLayout>
         

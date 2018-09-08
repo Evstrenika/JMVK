@@ -13,6 +13,7 @@ namespace Collaboro
         // Initialise Variables
         private PageNavigationManager navManager;
         public ICommand FindTeamButtonClick { protected set; get; }
+        public ICommand BookMeetingClick { protected set; get; }
 
         public ViewModel()
         {
@@ -22,7 +23,13 @@ namespace Collaboro
             {
                 navManager.ShowFindTeamPage();
             });
+
+            BookMeetingClick = new Command(() =>
+            {
+                navManager.ShowFindTeamPage();  // Needs updating
+            });
         }
 
-    }
+    }
+
 }

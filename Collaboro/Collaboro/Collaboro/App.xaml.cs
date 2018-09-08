@@ -20,6 +20,7 @@ namespace Collaboro
             //MainPage = new Collaboro.MainPage();
 
             // To be implemented properly once login is sorted
+            
             string user = "Tony";       // Temporary- for testing only
             
             if (user == null)
@@ -32,7 +33,7 @@ namespace Collaboro
                 MainPage = new NavigationPage(homePage);
                 PageNavigationManager.Instance.Navigation = MainPage.Navigation;
             }
-             
+            
         }
 
         protected override void OnStart()

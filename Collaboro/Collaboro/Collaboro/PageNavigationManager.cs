@@ -29,9 +29,18 @@ namespace Collaboro
         public INavigation Navigation
         {
             set { navigation = value; }
-        }        public void ShowFindTeamPage()
+        }
+
+        public void ShowFindTeamPage()
         {
             navigation.PushAsync(new FindTeam());
-        }
+        }
+
+        public void ShowBookMeetingPage()
+        {
+            navigation.PushAsync(new FindTeam()); // Needs updating
+        }
+
+
     }
 }
