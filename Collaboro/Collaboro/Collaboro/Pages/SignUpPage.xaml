@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Collaboro"
+             x:Class="Collaboro.SignUpPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Sign up details-->
+                <Label Text="Enter your details below to sign up!"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="Medium"
+                   FontAttributes="Bold"/>
+
+                <!--Make a grid-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Left Column-->
+                    <Label Text="First Name:"           FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Surname:"              FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="Email Address:"        FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="Confirm Email Address:" FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="Password:"             FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="Confirm Password:"     FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="5" Grid.Column="0"/>
+                    <Label Text="Pick your university" FontSize="Micro" VerticalOptions="CenterAndExpand" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Text="I accept the terms and conditions" VerticalOptions="CenterAndExpand" FontSize="Micro" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                    <!--The right column-->
+                    <Entry x:Name="firstNameEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="surnameEntry" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="emailAddress" Grid.Row="2" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="confirmEmailAdressEntry" Grid.Row="3" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="passwordEntry" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="confirmPasswordEntry" Grid.Row="5 " Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Picker x:Name="universityPicker" Title="University" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="6" Grid.Column="2" >
+                        <Picker.Items>
+                            <x:String>QUT</x:String>
+                            <x:String>UQ</x:String>
+                            <x:String>UF</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Switch x:Name="acceptTC" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="7" Grid.Column="2"/>
+
+                </Grid>
+
+
+                <Button x:Name="submitButton" Text="Submit" FontAttributes="Bold" HorizontalOptions="Center" Command="{Binding submitSignUpButton_Clicked}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

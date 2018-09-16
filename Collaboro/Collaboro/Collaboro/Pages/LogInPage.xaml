@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Collaboro"
+             xmlns:local1="clr-namespace:Collaboro.MarkupExtensions"
+             x:Class="Collaboro.LogInPage">
+
+
+    <StackLayout  Padding="10, 30, 10, 80">
+
+        <Label Text="Login"
+                   TextColor="Black"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="Start" 
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+
+        <Image Source="{local1:EmbeddedImage ResourceId=Collaboro.collaboroText.PNG}" 
+               HorizontalOptions="Center"/>
+
+        <Label Text="Email:"
+                   TextColor="Black"
+                   HorizontalOptions="Start"/>
+
+        <Entry Text=""
+                   Keyboard="Email"
+                   TextColor="Black"
+                   Placeholder="john@gmail.com"
+                   IsPassword="False"
+                   x:Name="emailAddressEntry"  />
+
+        <Label Text="Password:"
+                   TextColor="Black"
+                   HorizontalOptions="Start"/>
+
+        <Entry Text=""
+                   Keyboard="Default" 
+                   TextColor="Black"
+                   Placeholder="******"
+                   IsPassword="True"
+                   x:Name="passwordEntry" />
+
+        <Button x:Name="logInButton" 
+                    Text="Log In" 
+                Command="{Binding SubmitLogInButton_Clicked}"/>
+
+    </StackLayout>
+</ContentPage>
