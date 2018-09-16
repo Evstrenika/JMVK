@@ -1,10 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Collaboro.FindTeam">
+             xmlns:local="clr-namespace:Collaboro"
+             x:Class="Collaboro.FindTeam"
+             Title="Find Team">
+    
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+        <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+            
+            <StackLayout.BindingContext>
+                <local:ViewModel />
+            </StackLayout.BindingContext>
+            
+            <Label Text="Subject Code"
+                   TextColor="Black"
+                   FontSize="18"
+                   VerticalOptions="CenterAndExpand"/>
+            
+            <Entry Text=""
+                   Keyboard="Default"
+                   TextColor="Black"
+                   Placeholder="Subject Code"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="Code"/>
+
+            <Label Text="Tutorial Day"
+                   TextColor="Black"
+                   FontSize="18"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Picker Title="Tutorial Day"
+                VerticalOptions="CenterAndExpand"
+                x:Name="Day">
+                <Picker.Items>
+                    <x:String>Monday</x:String>
+                    <x:String>Tuesday</x:String>
+                    <x:String>Wednesday</x:String>
+                    <x:String>Thursday</x:String>
+                    <x:String>Friday</x:String>
+                    <x:String>Saturday</x:String>
+                    <x:String>Sunday</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Tutorial Starting Time"
+                   TextColor="Black"
+                   FontSize="18"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Picker Title="Tutorial Starting Time"
+                VerticalOptions="CenterAndExpand"
+                x:Name="Time">
+                <Picker.Items>
+                    <x:String>8am</x:String>
+                    <x:String>9am</x:String>
+                    <x:String>10am</x:String>
+                    <x:String>11am</x:String>
+                    <x:String>12pm</x:String>
+                    <x:String>1pm</x:String>
+                    <x:String>2pm</x:String>
+                    <x:String>3pm</x:String>
+                    <x:String>4pm</x:String>
+                    <x:String>5pm</x:String>
+                    <x:String>6pm</x:String>
+                    <x:String>7pm</x:String>
+                    <x:String>8pm</x:String>
+                    <x:String>9pm</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="{Binding Source={x:Reference stepper},
+                              Path=Value,
+                              StringFormat='{0} Total Team Members'}"
+                   TextColor="Black"
+                   FontSize="18"
+                   VerticalOptions="CenterAndExpand"/>
+            
+            <Stepper x:Name="stepper"
+                 Minimum="2"
+                 Maximum="10"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Required Skills - One Per Line"
+                   TextColor="Black"
+                   FontSize="18"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Editor VerticalOptions="CenterAndExpand"
+                    x:Name="Skills"/>
+
+            <Button Text="Submit"
+                    x:Name="Submit"
+                    VerticalOptions="CenterAndExpand"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

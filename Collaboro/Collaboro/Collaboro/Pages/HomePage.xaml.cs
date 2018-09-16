@@ -15,6 +15,7 @@ namespace Collaboro
         public HomePage()
         {
             InitializeComponent();
+            NavigationPage.SetBackButtonTitle(this, "Back");
         }
     }
 }
