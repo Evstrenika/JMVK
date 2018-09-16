@@ -11,7 +11,8 @@ namespace Collaboro
     {
 
         // Initialise Variables
-        private ContentPage homePage;
+        //private ContentPage homePage; // commented this out
+        private ContentPage mainPage;   // added this
 
         public App()
         {
@@ -29,8 +30,10 @@ namespace Collaboro
             }
             else
             {
-                homePage = new Collaboro.HomePage();
-                MainPage = new NavigationPage(homePage);
+                //homePage = new Collaboro.HomePage();  // commented this out
+                mainPage = new MainPage();  // added this
+                //MainPage = new NavigationPage(homePage);  // commented this out
+                MainPage = new NavigationPage(new MainPage());    // added this
                 PageNavigationManager.Instance.Navigation = MainPage.Navigation;
             }
             

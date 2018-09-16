@@ -41,6 +41,16 @@ namespace Collaboro
             navigation.PushAsync(new FindTeam()); // Needs updating
         }
 
+        public void ShowSignUpPage() {
+            navigation.PushAsync(new SignUpPage());
+        }
 
+        public void ShowLogInPage() {
+            navigation.PushAsync(new LogInPage());
+        }
+
+        public void ShowHomePage() {
+            navigation.PushAsync(new HomePage());
+        }
     }
 }
