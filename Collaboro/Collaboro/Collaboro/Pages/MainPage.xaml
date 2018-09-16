@@ -3,29 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Collaboro"
              xmlns:local1="clr-namespace:Collaboro.MarkupExtensions"
-             x:Class="Collaboro.MainPage">
-    
-    <ContentPage.BackgroundColor>
-        <Color>#99ccff</Color>
-    </ContentPage.BackgroundColor>
-    <StackLayout>
-        <Label Text="Welcome to Collaboro!" 
+             x:Class="Collaboro.MainPage"
+             Title="Main Page">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+            <StackLayout.BindingContext>
+                <local:ViewModel />
+            </StackLayout.BindingContext>
+
+            <Label Text="Welcome to Collaboro!" 
                HorizontalOptions="CenterAndExpand"
                FontSize="Medium"
                FontAttributes="Bold"
                TextColor="Black"/>
-        <!--This is where the image gets embedded... if you want to change the image, just make sure it's in Phoneword-->
-        <Image Source="{local1:EmbeddedImage ResourceId=Collaboro.collaboroText.PNG}" 
+
+            <!--This is where the image gets embedded... if you want to change the image, just make sure it's in Phoneword-->
+            <Image Source="{local1:EmbeddedImage ResourceId=Collaboro.collaboroText.PNG}" 
                HorizontalOptions="Center"/>
 
-        <Button x:Name="signUpButton" 
+            <Button x:Name="signUpButton" 
                 Text="Sign Up" 
-                Command="{Binding SignUpButton_Clicked}"/>
+                Command="{Binding SignUpButtonClicked}"/>
 
-        <Button x:Name="logInButton"
+            <Button x:Name="logInButton"
                 Text="Log in" 
-                Command="{Binding LogInButton_Clicked}"/>
+                Command="{Binding LogInButtonClicked}"/>
 
-    </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>

@@ -182,12 +182,4 @@ C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\
 C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\android\assets\System.Xml.pdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\bin\Debug\Collaboro.Android.dll
 C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.dll
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\bin\Debug\Collaboro.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\Collaboro.Android.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\Collaboro.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\Xamarin.Forms.Core.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\linksrc\Xamarin.Forms.Xaml.dll.mdb

@@ -2,10 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Collaboro"
-             x:Class="Collaboro.SignUpPage">
+             x:Class="Collaboro.SignUpPage"
+             Title="Sign Up">
+    
+    
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+                <StackLayout.BindingContext>
+                    <local:ViewModel />
+                </StackLayout.BindingContext>
+                
                 <!--Sign up details-->
                 <Label Text="Enter your details below to sign up!"
                 VerticalOptions="Start" 
@@ -60,7 +67,7 @@
                 </Grid>
 
 
-                <Button x:Name="submitButton" Text="Submit" FontAttributes="Bold" HorizontalOptions="Center" Command="{Binding submitSignUpButton_Clicked}"/>
+                <Button x:Name="submitButton" Text="Submit" FontAttributes="Bold" HorizontalOptions="Center" Command="{Binding SubmitSignUpButtonClicked}"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

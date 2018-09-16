@@ -11,8 +11,8 @@
 namespace Collaboro {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Thomas\\Documents\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\LogInPa" +
-        "ge.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Coll" +
+        "aboro\\Collaboro\\Pages\\LogInPage.xaml")]
     public partial class LogInPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
