@@ -25,7 +25,6 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojResolveAssemblyReference.cache
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.MainPage.xaml.g.cs
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.App.xaml.g.cs
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.HomePage.xaml.g.cs
@@ -55,3 +54,6 @@ C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Co
 C:\Users\Thomas\Documents\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojAssemblyReference.cache
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.LogInPage.xaml.g.cs
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.SignUpPage.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojAssemblyReference.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csproj.CoreCompileInputs.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csproj.CopyComplete

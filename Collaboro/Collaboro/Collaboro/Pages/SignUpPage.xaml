@@ -8,7 +8,7 @@
     
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+            <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
                 <StackLayout.BindingContext>
                     <local:ViewModel />
                 </StackLayout.BindingContext>

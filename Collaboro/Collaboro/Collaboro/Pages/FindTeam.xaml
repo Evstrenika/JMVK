@@ -7,7 +7,7 @@
     
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             
             <StackLayout.BindingContext>
                 <local:ViewModel />
@@ -15,7 +15,7 @@
             
             <Label Text="Subject Code"
                    TextColor="Black"
-                   FontSize="18"
+                   FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
             
             <Entry Text=""
@@ -27,7 +27,7 @@
 
             <Label Text="Tutorial Day"
                    TextColor="Black"
-                   FontSize="18"
+                   FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
 
             <Picker Title="Tutorial Day"
@@ -46,7 +46,7 @@
 
             <Label Text="Tutorial Starting Time"
                    TextColor="Black"
-                   FontSize="18"
+                   FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
 
             <Picker Title="Tutorial Starting Time"
@@ -72,9 +72,9 @@
 
             <Label Text="{Binding Source={x:Reference stepper},
                               Path=Value,
-                              StringFormat='{0} Total Team Members'}"
+                              StringFormat='There are {0} total team members'}"
                    TextColor="Black"
-                   FontSize="18"
+                   FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
             
             <Stepper x:Name="stepper"
@@ -86,7 +86,7 @@
 
             <Label Text="Required Skills - One Per Line"
                    TextColor="Black"
-                   FontSize="18"
+                   FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
 
             <Editor VerticalOptions="CenterAndExpand"

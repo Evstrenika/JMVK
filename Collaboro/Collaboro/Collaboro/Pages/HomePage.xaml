@@ -7,7 +7,7 @@
     
     <ContentPage.Content>
 
-        <StackLayout BackgroundColor="#99ccff" Padding="10, 30, 10, 80">
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
@@ -15,7 +15,7 @@
             <Label Text="Collaboro" 
                    HorizontalOptions="Center" 
                    VerticalOptions="Start" 
-                   FontSize="30"
+                   FontSize="Medium"
                    TextColor="Black"/>
             
             <Button Text="Find Team" 
@@ -25,7 +25,7 @@
                     WidthRequest="300"
                     BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="20"
+                    FontSize="Small"
                     Command="{Binding FindTeamButtonClick}">
             </Button>
 
@@ -36,7 +36,7 @@
                     WidthRequest="300"
                     BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="20"
+                    FontSize="Small"
                     Command="{Binding BookMeetingClick}">
             </Button>
             
@@ -47,7 +47,7 @@
                     WidthRequest="300"
                     BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="20"
+                    FontSize="Small"
                     Command="{Binding BookMeetingClick}">
             </Button>
             
@@ -58,7 +58,7 @@
                     WidthRequest="300"
                     BackgroundColor="White"
                     TextColor="Black"
-                    FontSize="20"
+                    FontSize="Small"
                     Command="{Binding BookMeetingClick}">
             </Button>
         </StackLayout>
