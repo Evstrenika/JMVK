@@ -12,15 +12,23 @@ namespace Collaboro
     {
         // Initialise Variables
         private PageNavigationManager navManager;
+
         public ICommand FindTeamButtonClick { protected set; get; }
         public ICommand BookMeetingClick { protected set; get; }
+        public ICommand AvailabilityClick { protected set; get; }
+        public ICommand ProfileClick { protected set; get; }
+
         public ICommand SignUpButtonClicked { protected set; get; }
         public ICommand LogInButtonClicked { protected set; get; }
         public ICommand SubmitSignUpButtonClicked { protected set; get; }
         public ICommand SubmitLogInButtonClicked { protected set;  get; }
 
+        public ICommand FindTeamSubmitClick { protected set; get; }
+
         public ViewModel()
         {
+            // Home Page Commands
+
             navManager = PageNavigationManager.Instance;
 
             FindTeamButtonClick = new Command(() =>
@@ -33,12 +41,24 @@ namespace Collaboro
                 navManager.ShowFindTeamPage();  // Needs updating
             });
 
+            AvailabilityClick = new Command(() =>
+            {
+                navManager.ShowFindTeamPage();  // Needs updating
+            });
+
+            ProfileClick = new Command(() =>
+            {
+                navManager.ShowFindTeamPage();  // Needs updating
+            });
+
+
+            // Log In and Sign Up Commands
+
             SignUpButtonClicked = new Command(() => 
             {
                 navManager.ShowSignUpPage();  
             });
 
-            
             LogInButtonClicked = new Command(() => 
             {
                 navManager.ShowLogInPage();  
@@ -50,6 +70,12 @@ namespace Collaboro
 
             SubmitLogInButtonClicked = new Command(() => {
                 navManager.ShowHomePage();
+            });
+
+            // Find Team Commands
+            FindTeamSubmitClick = new Command(() =>
+            {
+                navManager.ShowHomePage();  // To be updated!!
             });
         }
 

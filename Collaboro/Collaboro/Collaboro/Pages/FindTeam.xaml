@@ -94,7 +94,8 @@
 
             <Button Text="Submit"
                     x:Name="Submit"
-                    VerticalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="OnSubmit"/>
 
         </StackLayout>
     </ContentPage.Content>

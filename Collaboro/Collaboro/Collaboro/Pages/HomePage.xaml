@@ -49,7 +49,7 @@
                     BackgroundColor="White"
                     TextColor="Black"
                     FontSize="Small"
-                    Command="{Binding BookMeetingClick}">
+                    Command="{Binding AvailabilityClick}">
             </Button>
             
             <Button Text="Profile" 
@@ -60,7 +60,7 @@
                     BackgroundColor="White"
                     TextColor="Black"
                     FontSize="Small"
-                    Command="{Binding BookMeetingClick}">
+                    Command="{Binding ProfileClick}">
             </Button>
         </StackLayout>
         

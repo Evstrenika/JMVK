@@ -16,5 +16,16 @@ namespace Collaboro
         {
             InitializeComponent();
         }
+
+        private async void OnSubmit()
+        {
+            string code = Code.Text;
+            bool tuteDay = Day.SelectedIndex != -1;
+            bool tuteTime = Time.SelectedIndex != -1;
+            if (tuteDay && tuteTime)
+            {
+                await Navigation.PushAsync(new HomePage());
+            }
+        }
     }
 }
