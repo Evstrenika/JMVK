@@ -9,31 +9,22 @@ namespace Collaboro
 {
     public partial class App : Application
     {
-
-        // Initialise Variables
-        //private ContentPage homePage; // commented this out
-        private ContentPage mainPage;   // added this
-
         public App()
         {
             InitializeComponent();
 
-            //MainPage = new Collaboro.MainPage();
-
             // To be implemented properly once login is sorted
             
-            string user = "Tony";       // Temporary- for testing only
+            string user = null;       // Temporary- for testing only
             
             if (user == null)
             {
-                MainPage = new Collaboro.MainPage();
+                MainPage = new NavigationPage(new MainPage());
+                PageNavigationManager.Instance.Navigation = MainPage.Navigation;
             }
             else
             {
-                //homePage = new Collaboro.HomePage();  // commented this out
-                mainPage = new MainPage();  // added this
-                //MainPage = new NavigationPage(homePage);  // commented this out
-                MainPage = new NavigationPage(new MainPage());    // added this
+                MainPage = new NavigationPage(new HomePage());
                 PageNavigationManager.Instance.Navigation = MainPage.Navigation;
             }
             
