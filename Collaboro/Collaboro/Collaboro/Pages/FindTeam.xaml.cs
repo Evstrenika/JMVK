@@ -24,7 +24,7 @@ namespace Collaboro
             bool tuteTime = Time.SelectedIndex != -1;
             if (tuteDay && tuteTime)
             {
-                await Navigation.PushAsync(new HomePage());
+                await Navigation.PushAsync(new HomePage()); // To Replace
             }
         }
     }
