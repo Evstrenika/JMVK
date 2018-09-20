@@ -52,5 +52,10 @@ namespace Collaboro
         public void ShowHomePage() {
             navigation.PushAsync(new HomePage());
         }
+
+        public void ShowFindTeam2()
+        {
+            navigation.PushAsync(new FindTeamTwo());
+        }
     }
 }

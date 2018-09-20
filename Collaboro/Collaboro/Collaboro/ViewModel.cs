@@ -24,6 +24,7 @@ namespace Collaboro
         public ICommand SubmitLogInButtonClicked { protected set;  get; }
 
         public ICommand FindTeamSubmitClick { protected set; get; }
+        public ICommand FindTeamFinishedClick { protected set; get; }
 
         public ViewModel()
         {
@@ -72,10 +73,17 @@ namespace Collaboro
                 navManager.ShowHomePage();
             });
 
+
             // Find Team Commands
+
             FindTeamSubmitClick = new Command(() =>
             {
                 navManager.ShowHomePage();  // To be updated!!
+            });
+
+            FindTeamFinishedClick = new Command(() =>
+            {
+                navManager.ShowHomePage();
             });
         }
 
