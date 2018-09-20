@@ -92,6 +92,13 @@
             <Editor VerticalOptions="CenterAndExpand"
                     x:Name="Skills"/>
 
+            <Label Text="Please check your inputs before proceeding"
+                   IsVisible="False"
+                   TextColor="Red"
+                   FontSize="Small"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="Error"/>
+
             <Button Text="Submit"
                     x:Name="Submit"
                     VerticalOptions="CenterAndExpand"

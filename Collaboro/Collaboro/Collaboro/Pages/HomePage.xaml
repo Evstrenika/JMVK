@@ -60,7 +60,7 @@
                     BackgroundColor="White"
                     TextColor="Black"
                     FontSize="Small"
-                    Command="{Binding ProfileClick}">
+                    IsEnabled="False">
             </Button>
         </StackLayout>
         

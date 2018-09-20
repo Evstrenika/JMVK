@@ -12,7 +12,7 @@ namespace Collaboro.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FindTeamThree : ContentPage
     {
-        public FindTeamThree()
+        public FindTeamThree(int userID)
         {
             InitializeComponent();
             // Set title based on user's name

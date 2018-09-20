@@ -12,10 +12,15 @@ namespace Collaboro.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FindTeamTwo : ContentPage
     {
-        public FindTeamTwo(string code, string day, string time, int members, List<string> skills)
+        public FindTeamTwo(string code, string day, string time, int members, string[] skills)
         {
             InitializeComponent();
+            // A suggestion for the scrolling options
             // https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.listview?view=xamarin-forms
         }
+
+        // When user is clicked
+        // private async void CommandName()
+        // await Navigation.PushAsync(new FindTeamThree(userID));
     }
 }

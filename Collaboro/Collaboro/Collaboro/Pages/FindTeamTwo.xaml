@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.FindTeamTwo"
              Title="Select Members">
-    
-    
+
+
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>

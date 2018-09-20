@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.FindTeamThree">
 
-    
+
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
@@ -21,7 +21,7 @@
                     FontSize="Small"
                     Clicked="OnSubmit"
                     x:Name="SubmitBtn"/>
-            
+
             <Button Text="Finished Inviting"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
