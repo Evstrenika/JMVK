@@ -20,11 +20,7 @@ namespace Collaboro
 
         public ICommand SignUpButtonClicked { protected set; get; }
         public ICommand LogInButtonClicked { protected set; get; }
-        public ICommand SubmitSignUpButtonClicked { protected set; get; }
-        public ICommand SubmitLogInButtonClicked { protected set;  get; }
-
-        public ICommand FindTeamSubmitClick { protected set; get; }
-        public ICommand FindTeamFinishedClick { protected set; get; }
+        public ICommand SubmitToHome { protected set; get; }
 
         public ViewModel()
         {
@@ -65,24 +61,7 @@ namespace Collaboro
                 navManager.ShowLogInPage();  
             });
 
-            SubmitSignUpButtonClicked = new Command(() => {
-                navManager.ShowHomePage();
-            });
-
-            SubmitLogInButtonClicked = new Command(() => {
-                navManager.ShowHomePage();
-            });
-
-
-            // Find Team Commands
-
-            FindTeamSubmitClick = new Command(() =>
-            {
-                navManager.ShowHomePage();  // To be updated!!
-            });
-
-            FindTeamFinishedClick = new Command(() =>
-            {
+            SubmitToHome = new Command(() => {
                 navManager.ShowHomePage();
             });
         }

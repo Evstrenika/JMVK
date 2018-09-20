@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,9 +54,9 @@ namespace Collaboro
             navigation.PushAsync(new HomePage());
         }
 
-        public void ShowFindTeam2()
+        public void ShowFindTeamThree()
         {
-            navigation.PushAsync(new FindTeamTwo());
+            navigation.PushAsync(new FindTeamThree());
         }
     }
 }
