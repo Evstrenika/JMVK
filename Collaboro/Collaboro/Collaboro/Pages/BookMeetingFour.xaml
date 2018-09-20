@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Collaboro"
+             x:Class="Collaboro.Pages.BookMeetingFour"
+             Title="Confirm Meeting">
+    
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
+            <StackLayout.BindingContext>
+                <local:ViewModel />
+            </StackLayout.BindingContext>
+            
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Confirm"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    Command="{Binding SubmitToHome}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
