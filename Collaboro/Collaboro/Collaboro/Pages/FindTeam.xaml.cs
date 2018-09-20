@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,9 @@ namespace Collaboro
             bool tuteTime = Time.SelectedIndex != -1;
             if (tuteDay && tuteTime)
             {
-                await Navigation.PushAsync(new HomePage()); // To Replace
+                List<string> skillStringList = new List<string>();
+                // TO DO: CONVERT LINES OF TEXT ENTRY TO ENTRIES IN LIST
+                await Navigation.PushAsync(new FindTeamTwo(Code.Text, Day.SelectedItem.ToString(), Time.SelectedItem.ToString(), (int)stepper.Value, skillStringList));
             }
         }
     }

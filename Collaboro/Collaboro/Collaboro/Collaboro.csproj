@@ -39,6 +39,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="EmbeddedImage.cs" />
+    <Compile Include="Pages\FindTeam2.xaml.cs">
+      <DependentUpon>FindTeam2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FindTeam3.xaml.cs">
+      <DependentUpon>FindTeam3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LogInPage.xaml.cs">
       <DependentUpon>LogInPage.xaml</DependentUpon>
     </Compile>
@@ -105,6 +111,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FindTeam2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FindTeam3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

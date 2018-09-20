@@ -57,3 +57,5 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojAssemblyReference.cache
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csproj.CoreCompileInputs.cache
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csproj.CopyComplete
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.FindTeam2.xaml.g.cs
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.FindTeam3.xaml.g.cs
