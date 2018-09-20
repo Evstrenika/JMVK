@@ -51,7 +51,7 @@
                     <!--The right column-->
                     <Entry x:Name="firstNameEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <Entry x:Name="surnameEntry" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Entry x:Name="emailAddress" Grid.Row="2" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="emailAddressEntry" Grid.Row="2" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
                     <Entry x:Name="confirmEmailAdressEntry" Grid.Row="3" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
                     <Entry x:Name="passwordEntry" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <Entry x:Name="confirmPasswordEntry" Grid.Row="5 " Grid.Column="1" Grid.ColumnSpan="2"/>

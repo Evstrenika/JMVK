@@ -25,6 +25,9 @@ namespace Collaboro
 
         public ICommand FindTeamSubmitClick { protected set; get; }
 
+        // pages
+        public LogInPage logInPage;
+
         public ViewModel()
         {
             // Home Page Commands
