@@ -56,7 +56,7 @@ namespace Collaboro
 
         public void ShowFindTeamThree()
         {
-            navigation.PushAsync(new FindTeamThree());
+            navigation.PushAsync(new FindTeamThree(3)); // NEEDS UPDATING
         }
     }
 }
