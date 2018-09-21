@@ -1,20 +1,28 @@
-﻿using System;
+﻿using Collaboro.Data;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using System.Diagnostics;
+using System.Reflection;
+using System.Threading.Tasks;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Collaboro
 {
     public partial class App : Application
     {
+        static Database database;
+
         public App()
         {
             InitializeComponent();
 
             // To be implemented properly once login is sorted
-            
+
             string user = null;       // Temporary- for testing only
             
             if (user == null)
@@ -28,6 +36,18 @@ namespace Collaboro
                 PageNavigationManager.Instance.Navigation = MainPage.Navigation;
             }
             
+        }
+
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
+                }
+                return database;
+            }
         }
 
         protected override void OnStart()

@@ -21,6 +21,7 @@ namespace Collaboro.Pages
 
         // When user is clicked
         // private async void CommandName()
-        // await Navigation.PushAsync(new FindTeamThree(userID));
+        // await Navigation.PushAsync(new FindTeamThree(userEmail));
+
     }
 }

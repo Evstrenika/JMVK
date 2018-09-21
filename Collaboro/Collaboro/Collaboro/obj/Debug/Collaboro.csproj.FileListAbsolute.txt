@@ -58,3 +58,5 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csproj.CopyComplete
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.dll
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.pdb
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.csprojAssemblyReference.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\obj\Debug\Collaboro.Pages.Availability.xaml.g.cs

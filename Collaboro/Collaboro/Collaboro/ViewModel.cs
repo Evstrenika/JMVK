@@ -16,7 +16,6 @@ namespace Collaboro
         public ICommand FindTeamButtonClick { protected set; get; }
         public ICommand BookMeetingClick { protected set; get; }
         public ICommand AvailabilityClick { protected set; get; }
-        public ICommand ProfileClick { protected set; get; }
 
         public ICommand SignUpButtonClicked { protected set; get; }
         public ICommand LogInButtonClicked { protected set; get; }
@@ -38,17 +37,12 @@ namespace Collaboro
 
             BookMeetingClick = new Command(() =>
             {
-                navManager.ShowFindTeamPage();  // Needs updating
+                navManager.ShowBookMeetingPage();
             });
 
             AvailabilityClick = new Command(() =>
             {
-                navManager.ShowFindTeamPage();  // Needs updating
-            });
-
-            ProfileClick = new Command(() =>
-            {
-                navManager.ShowFindTeamPage();  // Needs updating
+                navManager.ShowAvailabilityPage();
             });
 
 

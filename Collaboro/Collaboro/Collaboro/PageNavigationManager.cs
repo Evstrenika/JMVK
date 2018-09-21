@@ -39,7 +39,7 @@ namespace Collaboro
 
         public void ShowBookMeetingPage()
         {
-            navigation.PushAsync(new FindTeam()); // Needs updating
+            navigation.PushAsync(new BookMeeting());
         }
 
         public void ShowSignUpPage() {
@@ -54,9 +54,9 @@ namespace Collaboro
             navigation.PushAsync(new HomePage());
         }
 
-        public void ShowFindTeamThree()
+        public void ShowAvailabilityPage()
         {
-            navigation.PushAsync(new FindTeamThree(3)); // NEEDS UPDATING
+            navigation.PushAsync(new Availability());
         }
     }
 }
