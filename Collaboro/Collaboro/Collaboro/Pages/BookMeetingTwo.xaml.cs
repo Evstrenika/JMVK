@@ -15,6 +15,7 @@ namespace Collaboro.Pages
         public BookMeetingTwo()
         {
             InitializeComponent();
+            //https://thatcsharpguy.com/post/multiselect-listview-mvvm-en/
         }
     }
 }

@@ -16,5 +16,23 @@ namespace Collaboro.Pages
         {
             InitializeComponent();
         }
+
+        /*
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var items = await App.TodoManager.GetTasksAsync();
+            groupsList.ItemsSource = items;
+            App.TodoManager.CurrentItems = items;
+        }
+
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var todoItem = e.SelectedItem as TodoItem;
+            var MeetingTwo = new BookMeetingTwo(int ID);  // Get ID?
+            todoPage.BindingContext = todoItem;
+            Navigation.PushAsync(MeetingTwo);
+        }*/
     }
 }

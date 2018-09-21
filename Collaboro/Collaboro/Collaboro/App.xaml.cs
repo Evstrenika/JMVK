@@ -1,4 +1,4 @@
-﻿using Collaboro.Data;
+﻿//using Collaboro.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +15,7 @@ namespace Collaboro
 {
     public partial class App : Application
     {
-        static Database database;
+        //static Database database;
 
         public App()
         {
@@ -37,18 +37,18 @@ namespace Collaboro
             }
             
         }
-
+        /*
         public static Database Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
+                    database = new Database(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
                 }
                 return database;
             }
-        }
+        }*/
 
         protected override void OnStart()
         {

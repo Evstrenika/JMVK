@@ -16,3 +16,6 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 System.Resources.ResourceManager
 System.Diagnostics.Tools
+SQLite-net
+SQLitePCLRaw.core
+SQLitePCLRaw.batteries_v2
