@@ -49,13 +49,13 @@
                     <Label Text="I accept the terms and conditions" VerticalOptions="CenterAndExpand" FontSize="Micro" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
 
                     <!--The right column-->
-                    <Entry x:Name="firstNameEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Entry x:Name="surnameEntry" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Entry x:Name="emailAddressEntry" Grid.Row="2" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="firstNameEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=FirstName}"/>
+                    <Entry x:Name="surnameEntry" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=Surname}"/>
+                    <Entry x:Name="emailAddressEntry" Grid.Row="2" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2" Text="{Binding Path=Email}"/>
                     <Entry x:Name="confirmEmailAdressEntry" Grid.Row="3" Grid.Column="1" Keyboard="Email" Grid.ColumnSpan="2"/>
-                    <Entry x:Name="passwordEntry" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Entry x:Name="passwordEntry" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=Password}"/>
                     <Entry x:Name="confirmPasswordEntry" Grid.Row="5 " Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Picker x:Name="universityPicker" Title="University" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="6" Grid.Column="2" >
+                    <Picker x:Name="universityPicker" Title="University" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  Grid.Row="6" Grid.Column="2" SelectedItem="{Binding Path=University}">
                         <Picker.Items>
                             <x:String>QUT</x:String>
                             <x:String>UQ</x:String>

@@ -15,7 +15,7 @@ namespace Collaboro
 {
     public partial class App : Application
     {
-        //static Database database;
+        public static DBManager DatabaseManager { get; private set; }
 
         public App()
         {

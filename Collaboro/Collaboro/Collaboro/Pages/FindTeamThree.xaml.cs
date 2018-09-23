@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,24 +13,43 @@ namespace Collaboro.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FindTeamThree : ContentPage
     {
-        public FindTeamThree(int userID)
+        // Variables
+        string email;
+        Student student;
+        int groupID;
+
+        public FindTeamThree(string email, int groupID)
         {
             InitializeComponent();
-            // Set title based on user's name
+            this.email = email;
+            this.groupID = groupID;
         }
 
-        private void OnSubmit()
+        protected async override void OnAppearing()
         {
+            base.OnAppearing();
+
+            student = await App.DatabaseManager.ReturnStudentAsync(email);
+            Title = student.FirstName + " " + student.Surname;
+        }
+
+        private async void OnSubmit()
+        {
+            Member member = new Member();
+            member.GroupID = groupID;
+            member.MemberEmail = email;
+            member.Confirmed = false;
+
             if (SubmitBtn.Text == "Invite to Team")
             {
                 SubmitBtn.Text = "Undo Invitation";
                 FinishedBtn.IsVisible = true;
-                // TO DO: ADD TO DATABASE
+                await App.DatabaseManager.AddMemberAsync(member);
             }
             else
             {
                 SubmitBtn.Text = "Invite to Team";
-                // TO DO: REMOVE FROM DATABASE
+                await App.DatabaseManager.RemoveMemberAsync(member);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,11 +22,19 @@ namespace Collaboro {
             string pass = passwordEntry.Text;
             if (emailIsValid(email) && passIsValid(pass))
             {
-                await Navigation.PushAsync(new HomePage()); // To Replace
+                Student student = await App.DatabaseManager.CheckCredentialsStudentAsync(email, pass);
+                if (student == null)
+                {
+                    await DisplayAlert("Incorrect Login", "The email or password is incorrect. Please try again.", "OK");
+                }
+                else
+                {
+                    await Navigation.PushAsync(new HomePage());
+                }
             }
             else
             {
-                await Navigation.PushAsync(new LogInPage());    // to replace
+                //Show warning message
             }
         }
 

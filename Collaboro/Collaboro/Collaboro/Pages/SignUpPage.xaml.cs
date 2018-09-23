@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +18,26 @@ namespace Collaboro {
 
         private async void signUpButton_Clicked()
         {
-            // fields and entries
-            
+            var student = (Student)BindingContext;
+
             if (IsValid())
             {
-                // keep going to the next page
-                // save the information in the DB
+                // If email already signed up, take to Login page
+                if (App.DatabaseManager.ReturnStudentAsync(emailAddressEntry.Text) != null)
+                {
+                    await DisplayAlert("Existing Account", "This email is already registered. Taking you to the login page...", "OK");
+                    await Navigation.PushAsync(new LogInPage());
+                }
+                else
+                {
+                    await App.DatabaseManager.RecordStudentAsync(student);
+                    await Navigation.PushAsync(new HomePage());
+                }
             }
             else
             {
                 // something is not valid, so respond to the validation
             }
-            await Navigation.PushAsync(new LogInPage());    // to replace
         }
 
         // checks if everything is valid and returns true if it is

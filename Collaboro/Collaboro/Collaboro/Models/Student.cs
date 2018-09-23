@@ -15,7 +15,7 @@ namespace Collaboro.Models
         public string Surname { get; set; }
         public string University { get; set; }
         public string Password { get; set; }
-        public string Salt { get; set; }
-        public int Rating { get; set; }
+        //public string Salt { get; set; }
+        //public int Rating { get; set; }
     }
 }

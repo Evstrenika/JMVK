@@ -16,6 +16,8 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
+            <!-- https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.listview?view=xamarin-forms -->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
