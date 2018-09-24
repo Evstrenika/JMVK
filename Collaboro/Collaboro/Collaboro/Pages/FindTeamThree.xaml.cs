@@ -39,6 +39,7 @@ namespace Collaboro.Pages
             member.GroupID = groupID;
             member.MemberEmail = email;
             member.Confirmed = false;
+            member.Displayed = false;
 
             if (SubmitBtn.Text == "Invite to Team")
             {
