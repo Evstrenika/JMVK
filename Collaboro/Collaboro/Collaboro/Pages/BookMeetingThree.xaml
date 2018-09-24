@@ -12,7 +12,7 @@
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
-            <ListView x:Name="availabilitiesList" Margin="20" ItemSelected="OnItemSelected">
+            <ListView x:Name="availabilitiesList" Margin="20"> <!--ItemSelected="OnItemSelected"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
