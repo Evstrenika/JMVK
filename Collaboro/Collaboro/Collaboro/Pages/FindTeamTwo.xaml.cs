@@ -38,6 +38,7 @@ namespace Collaboro.Pages
             var newMember = new Member();
             newMember.GroupID = groupID;
             newMember.Confirmed = true;
+            newMember.Displayed = true;
             //newMember.MemberEmail = TO DO     ** WHEN WE SAVE CURRENT USER DETAILS SOMEWHERE
             App.DatabaseManager.AddMemberAsync(newMember);
             members--;

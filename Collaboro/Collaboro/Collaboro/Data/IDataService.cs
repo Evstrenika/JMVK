@@ -25,9 +25,21 @@ namespace Collaboro
 
         Task RemoveMemberAsync(Member member);
 
+        Task<List<Member>> GetUndisplayedMembersAsync(Member member);
+
+        Task<List<Member>> GetStudentMemberships(string email);
+
+        Task<List<Member>> GetPendingStudentMemberships(string email);
+
+        Task MemberDisplayed(Member member);
+
+        Task AcceptMembership(Member member);
+
 
         // Group
         Task AddGroupAsync(Group group);
+
+        Task<Group> GetGroupAsync(int groupID);
 
         //Task<int> GetCurrentNumberMembers(int ID);
 

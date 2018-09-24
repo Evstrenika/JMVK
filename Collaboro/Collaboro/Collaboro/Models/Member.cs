@@ -13,6 +13,7 @@ namespace Collaboro.Models
         public int GroupID { get; set; }
         [PrimaryKey]
         public string MemberEmail { get; set; }
-        public bool Confirmed { get; set; }
+        public bool Confirmed { get; set; }         // Requestee Response
+        public bool Displayed { get; set; }         // Requester Notified
     }
 }

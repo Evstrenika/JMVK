@@ -55,11 +55,42 @@ namespace Collaboro
             return DbService.RemoveMemberAsync(member);
         }
 
+        public Task<List<Member>> GetUndisplayedMembersAsync(Member member)
+        {
+            return DbService.GetUndisplayedMembersAsync(member);
+        }
+
+        public Task<List<Member>> GetStudentMemberships(string email)
+        {
+            return DbService.GetStudentMemberships(email);
+        }
+
+        public Task<List<Member>> GetPendingStudentMemberships(string email)
+        {
+            return DbService.GetPendingStudentMemberships(email);
+        }
+
+        public Task MemberDisplayed(Member member)
+        {
+            return DbService.MemberDisplayed(member);
+        }
+
+        public Task AcceptMembership(Member member)
+        {
+            return DbService.AcceptMembership(member);
+        }
+
+
 
         // Group Commands
         public Task AddGroupAsync(Group group)
         {
             return DbService.AddGroupAsync(group);
+        }
+
+        public Task<Group> GetGroupAsync(int groupID)
+        {
+            return DbService.GetGroupAsync(groupID);
         }
     }
 }

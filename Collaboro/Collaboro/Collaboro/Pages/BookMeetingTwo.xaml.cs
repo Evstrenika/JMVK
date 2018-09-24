@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,17 @@ namespace Collaboro.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookMeetingTwo : ContentPage
     {
-        public BookMeetingTwo()
+        public BookMeetingTwo(Group group)
         {
             InitializeComponent();
-            //https://thatcsharpguy.com/post/multiselect-listview-mvvm-en/
+        }
+
+        private async void OnSubmit()
+        {
+            string MinimumTime = (MinTime.SelectedIndex == -1) ? "8am" : MinTime.SelectedItem.ToString();
+            string MaximumTime = (MaxTime.SelectedIndex == -1) ? "9pm" : MaxTime.SelectedItem.ToString();
+
+            await Navigation.PushAsync(new BookMeetingThree(stepper.Value, MinimumTime, MaximumTime));
         }
     }
 }

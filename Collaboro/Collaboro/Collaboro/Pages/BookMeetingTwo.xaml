@@ -11,11 +11,78 @@
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
-            
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
+
+            <Label Text="{Binding Source={x:Reference stepper},
+                              Path=Value,
+                              StringFormat='Meeting goes for {0} hours'}"
+                   TextColor="Black"
+                   FontSize="Small"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Stepper x:Name="stepper"
+                 Minimum="0.5"
+                 Maximum="6"
+                 Increment="0.5"
+                 HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Minimum Starting Time"
+                   TextColor="Black"
+                   FontSize="Small"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Picker Title="Minimum Starting Time"
+                VerticalOptions="CenterAndExpand"
+                x:Name="MinTime">
+                <Picker.Items>
+                    <x:String>8am</x:String>
+                    <x:String>9am</x:String>
+                    <x:String>10am</x:String>
+                    <x:String>11am</x:String>
+                    <x:String>12pm</x:String>
+                    <x:String>1pm</x:String>
+                    <x:String>2pm</x:String>
+                    <x:String>3pm</x:String>
+                    <x:String>4pm</x:String>
+                    <x:String>5pm</x:String>
+                    <x:String>6pm</x:String>
+                    <x:String>7pm</x:String>
+                    <x:String>8pm</x:String>
+                    <x:String>9pm</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Maximum Starting Time"
+                   TextColor="Black"
+                   FontSize="Small"
+                   VerticalOptions="CenterAndExpand"/>
+
+            <Picker Title="Maximum Starting Time"
+                VerticalOptions="CenterAndExpand"
+                x:Name="MaxTime">
+                <Picker.Items>
+                    <x:String>8am</x:String>
+                    <x:String>9am</x:String>
+                    <x:String>10am</x:String>
+                    <x:String>11am</x:String>
+                    <x:String>12pm</x:String>
+                    <x:String>1pm</x:String>
+                    <x:String>2pm</x:String>
+                    <x:String>3pm</x:String>
+                    <x:String>4pm</x:String>
+                    <x:String>5pm</x:String>
+                    <x:String>6pm</x:String>
+                    <x:String>7pm</x:String>
+                    <x:String>8pm</x:String>
+                    <x:String>9pm</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Submit"
+                    x:Name="Submit"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="OnSubmit"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

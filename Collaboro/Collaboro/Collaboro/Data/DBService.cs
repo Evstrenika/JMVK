@@ -58,11 +58,41 @@ namespace Collaboro
             return database.DeleteAsync(member);
         }
 
+        public Task<List<Member>> GetUndisplayedMembersAsync(Member member)
+        {
+            return database.Table<Member>().Where(i => i.GroupID == member.GroupID && i.Confirmed == true && i.Displayed == false).ToListAsync();
+        }
+
+        public Task<List<Member>> GetStudentMemberships(string email)
+        {
+            return database.Table<Member>().Where(i => i.MemberEmail == email && i.Confirmed == true).ToListAsync();
+        }
+
+        public Task<List<Member>> GetPendingStudentMemberships(string email)
+        {
+            return database.Table<Member>().Where(i => i.MemberEmail == email && i.Confirmed == false).ToListAsync();
+        }
+
+        public Task MemberDisplayed(Member member)
+        {
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Displayed='true' WHERE GroupID=? && MemberEmail=?", member.GroupID, member.MemberEmail);
+        }
+
+        public Task AcceptMembership(Member member)
+        {
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed='true' WHERE GroupID=? && MemberEmail=?", member.GroupID, member.MemberEmail);
+        }
+
 
         // Group Commands
         public Task AddGroupAsync(Group group)
         {
             return database.InsertAsync(group);
+        }
+
+        public Task<Group> GetGroupAsync(int groupID)
+        {
+            return database.Table<Group>().Where(i => i.ID == groupID).FirstOrDefaultAsync();
         }
 
 
