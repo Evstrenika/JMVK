@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,22 +18,27 @@ namespace Collaboro.Pages
             InitializeComponent();
         }
 
-        /*
         protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            var items = await App.TodoManager.GetTasksAsync();
-            groupsList.ItemsSource = items;
-            App.TodoManager.CurrentItems = items;
+            // TEMPORARY UNTIL LOGIN DETAILS SAVED **
+            string email = "hithere@gmail.com";
+
+            List<Member> memberships = await App.DatabaseManager.GetStudentMemberships(email);
+            List<Group> groups = new List<Group>();
+            foreach (Member member in memberships)
+            {
+                groups.Add(await App.DatabaseManager.GetGroupAsync(member.GroupID));
+            }
+
+            groupsList.ItemsSource = groups;
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var todoItem = e.SelectedItem as TodoItem;
-            var MeetingTwo = new BookMeetingTwo(int ID);  // Get ID?
-            todoPage.BindingContext = todoItem;
-            Navigation.PushAsync(MeetingTwo);
-        }*/
+            var selectedGroup = e.SelectedItem as Group;
+            Navigation.PushAsync(new BookMeetingTwo(selectedGroup));
+        }
     }
 }
