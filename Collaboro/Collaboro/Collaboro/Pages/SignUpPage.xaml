@@ -67,7 +67,7 @@
                 </Grid>
 
 
-                <Button x:Name="submitButton" Text="Submit" FontAttributes="Bold" HorizontalOptions="Center" Command="{Binding SubmitToHome}"/>
+                <Button x:Name="submitButton" Text="Submit" FontAttributes="Bold" HorizontalOptions="Center" Clicked="signUpButton_Clicked"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

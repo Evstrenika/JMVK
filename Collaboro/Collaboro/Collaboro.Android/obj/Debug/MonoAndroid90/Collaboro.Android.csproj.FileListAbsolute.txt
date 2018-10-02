@@ -96,6 +96,8 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\android\assets\System.Xml.Linq.pdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\android\assets\System.Xml.pdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\bin\Debug\Collaboro.Android.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro\bin\Debug\Collaboro.dll
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\bin\Debug\Collaboro.dll.mdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\linksrc\Collaboro.Android.dll.mdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\linksrc\Collaboro.dll.mdb
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\linksrc\FormsViewGroup.dll.mdb

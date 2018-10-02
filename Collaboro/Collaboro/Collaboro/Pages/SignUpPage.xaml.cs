@@ -107,5 +107,9 @@ namespace Collaboro {
             return false;
         }
 
+        private void submitButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

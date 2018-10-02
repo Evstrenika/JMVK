@@ -34,7 +34,7 @@ namespace Collaboro {
             }
             else
             {
-                //Show warning message
+                await DisplayAlert("Incorrect Login", "The email or password is incorrect. Please try again.", "OK");
             }
         }
 
