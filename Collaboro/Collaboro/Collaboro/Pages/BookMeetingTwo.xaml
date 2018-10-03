@@ -81,7 +81,8 @@
             <Button Text="Submit"
                     x:Name="Submit"
                     VerticalOptions="CenterAndExpand"
-                    Clicked="OnSubmit"/>
+                    Clicked="OnSubmit"
+                    BackgroundColor="AliceBlue"/>
 
         </StackLayout>
     </ContentPage.Content>

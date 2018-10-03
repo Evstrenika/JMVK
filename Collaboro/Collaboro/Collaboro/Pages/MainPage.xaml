@@ -24,11 +24,19 @@
 
             <Button x:Name="signUpButton" 
                 Text="Sign Up" 
-                Command="{Binding SignUpButtonClicked}"/>
+                Command="{Binding SignUpButtonClicked}"
+                HeightRequest="120"
+                VerticalOptions="CenterAndExpand"
+                FontSize="Large"
+                BackgroundColor="AliceBlue"/>
 
             <Button x:Name="logInButton"
                 Text="Log in" 
-                Command="{Binding LogInButtonClicked}"/>
+                Command="{Binding LogInButtonClicked}"
+                HeightRequest="120"
+                VerticalOptions="CenterAndExpand"
+                FontSize="Large"
+                BackgroundColor="AliceBlue"/>
 
         </StackLayout>
     </ContentPage.Content>

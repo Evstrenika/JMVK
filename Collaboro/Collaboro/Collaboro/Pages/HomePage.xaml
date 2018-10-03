@@ -24,7 +24,7 @@
                     HeightRequest="80"
                     HorizontalOptions="Center"
                     WidthRequest="300"
-                    BackgroundColor="White"
+                    BackgroundColor="AliceBlue"
                     TextColor="Black"
                     FontSize="Small"
                     Command="{Binding FindTeamButtonClick}">
@@ -35,7 +35,7 @@
                     HeightRequest="80"
                     HorizontalOptions="Center"
                     WidthRequest="300"
-                    BackgroundColor="White"
+                    BackgroundColor="AliceBlue"
                     TextColor="Black"
                     FontSize="Small"
                     Command="{Binding BookMeetingClick}">
@@ -46,7 +46,7 @@
                     HeightRequest="80"
                     HorizontalOptions="Center"
                     WidthRequest="300"
-                    BackgroundColor="White"
+                    BackgroundColor="AliceBlue"
                     TextColor="Black"
                     FontSize="Small"
                     Command="{Binding AvailabilityClick}">
@@ -57,7 +57,7 @@
                     HeightRequest="80"
                     HorizontalOptions="Center"
                     WidthRequest="300"
-                    BackgroundColor="White"
+                    BackgroundColor="AliceBlue"
                     TextColor="Black"
                     FontSize="Small"
                     IsEnabled="False">

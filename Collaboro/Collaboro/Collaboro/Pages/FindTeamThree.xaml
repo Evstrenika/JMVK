@@ -28,7 +28,8 @@
                     FontSize="Small"
                     Command="{Binding SubmitToHome}"
                     x:Name="FinishedBtn"
-                    IsVisible="false"/>
+                    IsVisible="false"
+                    BackgroundColor="AliceBlue"/>
 
         </StackLayout>
     </ContentPage.Content>

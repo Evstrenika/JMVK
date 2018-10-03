@@ -20,7 +20,8 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     FontSize="Large"
-                    Command="{Binding SubmitToHome}"/>
+                    Command="{Binding SubmitToHome}"
+                    BackgroundColor="AliceBlue"/>
 
         </StackLayout>
     </ContentPage.Content>
