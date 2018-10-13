@@ -36,12 +36,13 @@ namespace Collaboro
             return DbService.CheckStudentAsync(email, password);
         }
 
-
+        // This next method probably needs to go back in eventually
         // Availability
+        /*
         public Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time)
         {
             return DbService.GetPotentialMembersAsync(code, day, time);
-        }
+        } */
 
 
         // Member Commands

@@ -11,8 +11,8 @@
 namespace Collaboro.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Coll" +
-        "aboro\\Collaboro\\Pages\\BookMeeting.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Katarina\\Documents\\Collaboro\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\Bo" +
+        "okMeeting.xaml")]
     public partial class BookMeeting : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

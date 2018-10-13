@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Collaboro.Tuesday"
+             xmlns:local="clr-namespace:Collaboro"
+             Title="T">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+            <Label Text="What times are you not available on Tuesdays?"/>
+            <Grid Margin="0,5,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text=" " Margin="0,2,2,4"/>
+                <Label Text="I have class" Grid.Column="1" FontSize="Small" VerticalOptions="Start"/>
+                <Label Text="I'm busy" Grid.Column="2" FontSize="Small" VerticalOptions="Start" />
+            </Grid>
+            <ListView x:Name="TuesdayList"  BackgroundColor="LightBlue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding startAndEnd}" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                                </StackLayout>
+                                <Switch x:Name="classToggle" IsToggled="{Binding ClassAtThisTime}" Grid.Column="1" Toggled="ClassSwitch_Toggled" IsEnabled="{Binding ClassBusyEnabled, Mode=TwoWay}"/>
+                                <Switch x:Name="otherToggle" IsToggled="{Binding OtherwiseBusy}" Grid.Column="2" Toggled="OtherSwitch_Toggled" IsEnabled="{Binding OtherBusyEnabled, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- <Button x:Name="uploadBtn" Text="Upload" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>-->
+                <Button x:Name="clearBtn" Text="Clear" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Clicked="btnClear_isClicked"/>
+                <Button x:Name="updateBtn" Text="Update" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
