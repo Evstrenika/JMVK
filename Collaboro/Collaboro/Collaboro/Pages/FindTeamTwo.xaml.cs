@@ -48,7 +48,8 @@ namespace Collaboro.Pages
         {
             base.OnAppearing();
 
-            var items = await App.DatabaseManager.GetPotentialMembersAsync(code, day, time);
+            // This next line probably needs to go back in eventually
+            //var items = await App.DatabaseManager.GetPotentialMembersAsync(code, day, time);
             //listView.ItemsSource = items;
         }
 

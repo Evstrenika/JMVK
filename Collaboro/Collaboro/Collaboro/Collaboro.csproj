@@ -42,10 +42,16 @@
     <Compile Include="Data\IDataService.cs" />
     <Compile Include="Data\DBManager.cs" />
     <Compile Include="EmbeddedImage.cs" />
+    <Compile Include="Pages\Weekdays\Friday.xaml.cs">
+      <DependentUpon>Friday.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Pages\Weekdays\Monday.xaml.cs">
+      <DependentUpon>Monday.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Availability.xaml.cs">
       <DependentUpon>Availability.xaml</DependentUpon>
     </Compile>
@@ -84,7 +90,23 @@
     <Compile Include="Pages\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Weekdays\Tuesday.xaml.cs">
+      <DependentUpon>Tuesday.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Weekdays\Saturday.xaml.cs">
+      <DependentUpon>Saturday.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Weekdays\Sunday.xaml.cs">
+      <DependentUpon>Sunday.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Weekdays\Thursday.xaml.cs">
+      <DependentUpon>Thursday.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSlot.cs" />
     <Compile Include="ViewModel.cs" />
+    <Compile Include="Pages\Weekdays\Wednesday.xaml.cs">
+      <DependentUpon>Wednesday.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\MainPage.xaml">
@@ -183,7 +205,48 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Monday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Tuesday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Wednesday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Thursday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Friday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Saturday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Weekdays\Sunday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
