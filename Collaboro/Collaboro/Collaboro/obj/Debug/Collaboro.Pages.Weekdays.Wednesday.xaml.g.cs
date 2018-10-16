@@ -11,8 +11,7 @@
 namespace Collaboro {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Katarina\\Documents\\Collaboro\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\We" +
-        "ekdays\\Wednesday.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\Weekdays\\Wednesday.xaml")]
     public partial class Wednesday : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

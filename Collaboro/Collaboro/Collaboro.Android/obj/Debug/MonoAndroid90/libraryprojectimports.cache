@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <Jars>
-    <Jar>C:\Users\Katarina\Documents\Collaboro\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\1\jl\formsviewgroup.jar</Jar>
+    <Jar>C:\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\1\jl\formsviewgroup.jar</Jar>
   </Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>C:\Users\Katarina\Documents\Collaboro\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\13\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\Katarina\Documents\Collaboro\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\14\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\13\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\14\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\\Debug\MonoAndroid90\lp\13\jl\assets</ResolvedAssetDirectory>
@@ -13,7 +13,7 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>C:\Users\Katarina\Documents\Collaboro\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\13.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\Katarina\Documents\Collaboro\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\14.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\13.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\JMVK\Collaboro\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid90\lp\14.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

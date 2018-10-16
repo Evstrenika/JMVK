@@ -11,8 +11,7 @@
 namespace Collaboro {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Katarina\\Documents\\Collaboro\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\Av" +
-        "ailability.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\Availability.xaml")]
     public partial class Availability : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

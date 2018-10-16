@@ -11,8 +11,7 @@
 namespace Collaboro.Pages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Katarina\\Documents\\Collaboro\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\Fi" +
-        "ndTeamTwo.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\JMVK\\Collaboro\\Collaboro\\Collaboro\\Pages\\FindTeamTwo.xaml")]
     public partial class FindTeamTwo : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

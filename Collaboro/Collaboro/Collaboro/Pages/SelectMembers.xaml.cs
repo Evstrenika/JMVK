@@ -9,9 +9,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Collaboro.Pages {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Select Members : ContentPage
+    public partial class SelectMembers : ContentPage
 	{
-		public Select Members() {
+		public SelectMembers() {
         InitializeComponent();
     }
 }

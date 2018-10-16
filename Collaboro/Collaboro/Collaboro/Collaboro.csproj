@@ -42,6 +42,12 @@
     <Compile Include="Data\IDataService.cs" />
     <Compile Include="Data\DBManager.cs" />
     <Compile Include="EmbeddedImage.cs" />
+    <Compile Include="Pages\ProfileInvite.xaml.cs">
+      <DependentUpon>ProfileInvite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SelectMembers.xaml.cs">
+      <DependentUpon>SelectMembers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Weekdays\Friday.xaml.cs">
       <DependentUpon>Friday.xaml</DependentUpon>
     </Compile>
@@ -243,6 +249,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Weekdays\Sunday.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ProfileInvite.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\SelectMembers.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
