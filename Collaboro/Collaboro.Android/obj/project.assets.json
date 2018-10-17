@@ -949,11 +949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.Android\\Collaboro.Android.csproj",
+      "projectUniqueName": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.Android\\Collaboro.Android.csproj",
       "projectName": "Collaboro.Android",
-      "projectPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.Android\\Collaboro.Android.csproj",
+      "projectPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.Android\\Collaboro.Android.csproj",
       "packagesPath": "C:\\Users\\jodie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.Android\\obj\\",
+      "outputPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -970,8 +970,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj": {
-              "projectPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj"
+            "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj": {
+              "projectPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj"
             }
           }
         }

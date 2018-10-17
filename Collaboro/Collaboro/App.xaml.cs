@@ -24,7 +24,7 @@ namespace Collaboro
             InitializeComponent();
             DatabaseManager = new DBManager(new DBService(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3")));
 
-            StaticDatabasePrototyping();
+            //StaticDatabasePrototyping();
 
             MainPage = new NavigationPage(new MainPage());
             PageNavigationManager.Instance.Navigation = MainPage.Navigation;

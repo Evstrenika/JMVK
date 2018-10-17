@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj",
+      "projectUniqueName": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj",
       "projectName": "Collaboro",
-      "projectPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj",
+      "projectPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj",
       "packagesPath": "C:\\Users\\jodie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\obj\\",
+      "outputPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

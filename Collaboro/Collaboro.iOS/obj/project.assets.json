@@ -1014,11 +1014,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.iOS\\Collaboro.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.iOS\\Collaboro.iOS.csproj",
       "projectName": "Collaboro.iOS",
-      "projectPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.iOS\\Collaboro.iOS.csproj",
+      "projectPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.iOS\\Collaboro.iOS.csproj",
       "packagesPath": "C:\\Users\\jodie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro.iOS\\obj\\",
+      "outputPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1035,8 +1035,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj": {
-              "projectPath": "C:\\Users\\jodie\\Documents\\0 Documents\\University\\IAB330\\GitHub\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj"
+            "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj": {
+              "projectPath": "C:\\Users\\jodie\\Documents\\JMVK\\Collaboro\\Collaboro\\Collaboro.csproj"
             }
           }
         }
