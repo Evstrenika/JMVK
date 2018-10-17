@@ -1,0 +1,2 @@
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\Collaboro.Android.csprojAssemblyReference.cache
+C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\res.flag
