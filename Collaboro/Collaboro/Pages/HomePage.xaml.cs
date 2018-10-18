@@ -13,21 +13,22 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        public HomePage()
+        string email;
+
+        public HomePage(string user)
         {
             InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, "Back");
+            email = user;
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()   // aync temporarily removed
         {
             base.OnAppearing();
 
-            // TEMPORARY UNTIL LOGGED IN DETAILS SAVED **
-            string email = "hithere@hotmail.com";
-
+            
             // -- Show Notifications --
-
+            /*      COMMENTED OUT WHILE DATABASES BEING FIXED   TO DO
             // People have accepted request
             List<Member> memberOf = await App.DatabaseManager.GetStudentMemberships(email);
             foreach (Member group in memberOf)
@@ -59,7 +60,7 @@ namespace Collaboro
                 {
                     await App.DatabaseManager.RemoveMemberAsync(offer);
                 }
-            }
+            }*/
         }
     }
 }

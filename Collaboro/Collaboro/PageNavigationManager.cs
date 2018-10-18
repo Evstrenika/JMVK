@@ -50,9 +50,9 @@ namespace Collaboro
             navigation.PushAsync(new LogInPage());
         }
 
-        public void ShowHomePage() {
+        /*public void ShowHomePage() {
             navigation.PushAsync(new HomePage());
-        }
+        }*/
 
         public void ShowAvailabilityPage()
         {

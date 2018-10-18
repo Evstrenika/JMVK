@@ -58,9 +58,9 @@ namespace Collaboro
                 navManager.ShowLogInPage();  
             });
 
-            SubmitToHome = new Command(() => {
+            /*SubmitToHome = new Command(() => {
                 navManager.ShowHomePage();
-            });
+            });*/
         }
 
     }

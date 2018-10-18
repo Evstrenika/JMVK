@@ -91,7 +91,6 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.dll
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.pdb
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Availability.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\BookMeeting.xaml.g.cs

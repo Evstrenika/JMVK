@@ -20,12 +20,15 @@ namespace Collaboro
         {
             try
             {
-                database.CreateTableAsync<Student>().Wait();
-                database.CreateTableAsync<Availability>().Wait();
+                //database.CreateTableAsync<Student>().Wait();
+                //database.CreateTableAsync<Availability>().Wait();
+                database.CreateTableAsync<Group>().Wait();
+                database.CreateTableAsync<Member>().Wait();
+                database.CreateTableAsync<Meeting>().Wait();
             }
             catch
             {
-
+                // Above already added
             }
         }
 

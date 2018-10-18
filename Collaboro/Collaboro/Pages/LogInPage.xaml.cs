@@ -29,7 +29,7 @@ namespace Collaboro {
                 }
                 else
                 {
-                    await Navigation.PushAsync(new HomePage());
+                    await Navigation.PushAsync(new HomePage(email));
                 }
             }
             else

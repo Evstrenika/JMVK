@@ -24,7 +24,7 @@ namespace Collaboro
             InitializeComponent();
             DatabaseManager = new DBManager(new DBService(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3")));
 
-            //StaticDatabasePrototyping();
+            StaticDatabasePrototyping();
 
             MainPage = new NavigationPage(new MainPage());
             PageNavigationManager.Instance.Navigation = MainPage.Navigation;
@@ -34,13 +34,20 @@ namespace Collaboro
         
         private async void StaticDatabasePrototyping()
         {
-            Student jason = new Student();
-            jason.Email = "jason@gmail.com";
-            jason.FirstName = "Jason";
-            jason.Surname = "Smith";
-            jason.University = "QUT";
-            jason.Password = "222222";
-            await App.DatabaseManager.RecordStudentAsync(jason);
+            try
+            {
+                Student jason = new Student();
+                jason.Email = "j@g.com";
+                jason.FirstName = "Jason";
+                jason.Surname = "Smith";
+                jason.University = "QUT";
+                jason.Password = "222222";
+                await App.DatabaseManager.RecordStudentAsync(jason);
+            }
+            catch
+            {
+                // Above already added
+            }
         }
         
         /*public static Database Database

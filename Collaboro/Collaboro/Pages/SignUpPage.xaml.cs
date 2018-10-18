@@ -31,7 +31,7 @@ namespace Collaboro {
                 else
                 {
                     await App.DatabaseManager.RecordStudentAsync(student);
-                    await Navigation.PushAsync(new HomePage());
+                    await Navigation.PushAsync(new HomePage(emailAddressEntry.Text));
                 }
             }
             else
