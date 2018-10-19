@@ -105,15 +105,25 @@ namespace Collaboro
 
         }
 
-        private void btnClear_isClicked()
+        private async void btnClear_isClicked()
         {
+            bool clearAll = await DisplayAlert("Clear", "Are you sure you wish to clear all times?", "Yes, please!", "No, don't do it!");
             // iterate through the list and reset all buttons and values
             for (int i = 0; i <= maxNumInstantiated; i++)
             {
-                mList[i].ClassAtThisTime = false;
-                mList[i].OtherwiseBusy = false;
-                mList[i].ClassBusyEnabled = true;
-                mList[i].OtherBusyEnabled = true;
+                if (clearAll)
+                {
+                    // yes, they want to clear everything
+                    mList[i].ClassAtThisTime = false;
+                    mList[i].OtherwiseBusy = false;
+                    mList[i].ClassBusyEnabled = true;
+                    mList[i].OtherBusyEnabled = true;
+                }
+                else
+                {
+                    // no, they don't want to clear stuff
+                }
+
 
             }
         }
