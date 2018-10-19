@@ -60,8 +60,8 @@ namespace Collaboro
         public Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time)
         {
             return database.Table<Availability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
-        } */
-
+        } 
+        */
 
         // Member Commands
         public Task AddMemberAsync(Member member)

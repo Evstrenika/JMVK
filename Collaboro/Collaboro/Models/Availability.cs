@@ -11,7 +11,9 @@ namespace Collaboro.Models
     {
         [PrimaryKey, Unique]
         public string Email { get; set; }
+        [PrimaryKey, Unique]
         public string Day { get; set; }
+        [PrimaryKey, Unique]
         public string Time { get; set; }
         public string Activity { get; set; }    // May be a class
     }
