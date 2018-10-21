@@ -1,12 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.SelectMembers">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
+            <StackLayout.BindingContext>
+                <local:ViewModel />
+            </StackLayout.BindingContext>
+            
+            <Label Text="James ****"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Fiona ****"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Georgia ***"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Murray ***"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Harry ***"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Michelle **"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Bruce **"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
+
+            <Label Text="Stacey **"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                FontSize="Large"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
