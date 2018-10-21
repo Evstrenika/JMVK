@@ -11,26 +11,27 @@
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
-            <!--Meeting time details-->
+            <!--Meeting time heading -->
             <Label Text="Meeting time is:"
                 VerticalOptions="Start" 
                 HorizontalOptions="StartAndExpand" 
                 FontSize="Large"
                 FontAttributes="Bold"/>
 
-            <!-- Add linking meeting details here - STATIC values currently-->
+            <!-- Meeting time details -->
             <Label Text="Monday, 3pm - 4pm"
                 VerticalOptions="Start" 
                 HorizontalOptions="StartAndExpand" 
                 FontSize="Large"
                 FontAttributes="Bold"/>
 
-            <!---Location details-->
+            <!---Location details -->
             <Label Text="Location (Optional):" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
 
+            <!---Location input field -->
             <Entry x:Name="locationEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=Location}"/>
 
-            <!--Confirm button-->
+            <!--Confirm button -->
             <Button Text="Confirm"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
