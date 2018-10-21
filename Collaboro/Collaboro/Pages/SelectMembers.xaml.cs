@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Collaboro.Pages {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SelectMembers : ContentPage
+namespace Collaboro.Pages
+{
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class SelectMembers : ContentPage
 	{
-        public SelectMembers()
-        {
-            InitializeComponent();
-        }
-    }
+		public SelectMembers ()
+		{
+			InitializeComponent ();
+		}
+	}
 }
