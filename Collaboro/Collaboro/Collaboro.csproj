@@ -23,4 +23,10 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\AvailabilityPage.xaml.cs">
+      <DependentUpon>AvailabilityPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

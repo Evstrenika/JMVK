@@ -56,7 +56,7 @@ namespace Collaboro
 
         public void ShowAvailabilityPage()
         {
-            navigation.PushAsync(new Availability());
+            navigation.PushAsync(new AvailabilityPage());
         }
     }
 }

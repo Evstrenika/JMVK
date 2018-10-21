@@ -54,14 +54,13 @@ namespace Collaboro
             return database.Table<Student>().Where(i => i.Email == email && i.Password == password).FirstOrDefaultAsync();
         }
 
-        // This next method probably needs to go back in eventually
+        
         // Availability Commands
-        /*
         public Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time)
         {
             return database.Table<Availability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
         } 
-        */
+        
 
         // Member Commands
         public Task AddMemberAsync(Member member)

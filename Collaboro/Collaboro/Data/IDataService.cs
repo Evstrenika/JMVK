@@ -15,9 +15,9 @@ namespace Collaboro
 
         Task<Student> CheckStudentAsync(string email, string password);
 
-        // This next line probably needs to go back in eventually
+
         // Availbility
-        //Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time);
+        Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time);
 
 
         // Member
