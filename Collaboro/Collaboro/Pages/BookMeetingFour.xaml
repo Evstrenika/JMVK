@@ -5,22 +5,36 @@
              x:Class="Collaboro.Pages.BookMeetingFour"
              Title="Confirm Meeting">
     
-    
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
-            
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
+            <!--Meeting time details-->
+            <Label Text="Meeting time is:"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand" 
+                FontSize="Large"
+                FontAttributes="Bold"/>
+
+            <!-- Add linking meeting details here - STATIC values currently-->
+            <Label Text="Monday, 3pm - 4pm"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand" 
+                FontSize="Large"
+                FontAttributes="Bold"/>
+
+            <!---Location details-->
+            <Label Text="Location (Optional):" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
+
+            <Entry x:Name="locationEntry" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=Location}"/>
+
+            <!--Confirm button-->
             <Button Text="Confirm"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     FontSize="Large"
-                    Command="{Binding SubmitToHome}"
                     BackgroundColor="AliceBlue"/>
 
         </StackLayout>
