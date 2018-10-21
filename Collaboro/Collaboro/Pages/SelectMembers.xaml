@@ -10,45 +10,63 @@
                 <local:ViewModel />
             </StackLayout.BindingContext>
             
-            <Label Text="James ****"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <!---Members to select from -->
+            <Button Text="Fiona * * * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Fiona ****"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="James * * * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Georgia ***"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Georgia * * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Murray ***"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Murray * * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Harry ***"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Patricia * * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Michelle **"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Michelle * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Bruce **"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Bruce * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
 
-            <Label Text="Stacey **"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" 
-                FontSize="Large"/>
+            <Button Text="Stacey * *"
+                    HeightRequest="100"
+                    BackgroundColor="White"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="Large"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
