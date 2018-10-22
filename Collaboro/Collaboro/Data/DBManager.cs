@@ -16,9 +16,9 @@ namespace Collaboro
 		}
 
         // Students
-        public Task<int> ReturnNumStudents()
+        public Task<int> ReturnNumStudentsAsync()
         {
-            return DbService.ReturnNumStudents();
+            return DbService.ReturnNumStudentsAsync();
         }
 
 		public Task<List<Student>> ReturnStudentsAsync ()

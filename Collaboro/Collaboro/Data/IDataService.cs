@@ -7,7 +7,7 @@ namespace Collaboro
 	public interface IDataService
 	{
         // Students
-        Task<int> ReturnNumStudents();
+        Task<int> ReturnNumStudentsAsync();
 
         Task<Student> GetStudentAsync(string email);
 

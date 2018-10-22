@@ -39,7 +39,6 @@ namespace Collaboro {
         }
 
         // returns true if the email fed to it is valid
-        // still needs some work
         public bool emailIsValid(string email)
         {
             if(email != null && email.Contains("@"))
@@ -50,10 +49,9 @@ namespace Collaboro {
         }
 
         // returns true if the password fed to it is valid
-        // still needs some work
         public bool passIsValid(string pass)
         {
-            if(pass != null)
+            if (pass != null)
             {
                 return true;
             }

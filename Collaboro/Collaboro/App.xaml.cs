@@ -34,7 +34,7 @@ namespace Collaboro
         
         private async void StaticDatabasePrototyping()
         {
-            if (await DatabaseManager.ReturnNumStudents() == 0)
+            if (await DatabaseManager.ReturnNumStudentsAsync() == 0)
             {
                 Student jason = new Student();
                 jason.Email = "j@g.com";

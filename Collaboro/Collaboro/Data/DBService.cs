@@ -27,7 +27,7 @@ namespace Collaboro
 
 
         // Student Commands
-        public Task<int> ReturnNumStudents()
+        public Task<int> ReturnNumStudentsAsync()
         {
             return database.Table<Student>().CountAsync();
         }
@@ -73,12 +73,12 @@ namespace Collaboro
 
         public Task<List<Member>> GetUndisplayedMembersAsync(Member member)
         {
-            return database.Table<Member>().Where(i => i.GroupID == member.GroupID && i.Confirmed == true && i.Displayed == false).ToListAsync();
+            return database.Table<Member>().Where(i => i.GroupID == member.GroupID && i.Confirmed == true && i.Displayed == false && i.MemberEmail != App.AccountEmail).ToListAsync();
         }
 
         public Task<List<Member>> GetStudentMemberships(string email)
         {
-            return database.Table<Member>().Where(i => i.MemberEmail == email && i.Confirmed == true).ToListAsync();
+            return database.Table<Member>().Where(i => i.MemberEmail == email).ToListAsync();   //&& i.Confirmed == true
         }
 
         public Task<List<Member>> GetPendingStudentMemberships(string email)
@@ -88,12 +88,12 @@ namespace Collaboro
 
         public Task MemberDisplayed(Member member)
         {
-            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Displayed='true' WHERE GroupID=? AND MemberEmail=?", member.GroupID, member.MemberEmail);
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Displayed=? WHERE GroupID=? AND MemberEmail=?", true, member.GroupID, member.MemberEmail);
         }
 
         public Task AcceptMembership(Member member)
         {
-            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed='true' WHERE GroupID=? AND MemberEmail=?", member.GroupID, member.MemberEmail);
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed=? WHERE GroupID=? AND MemberEmail=?", true, member.GroupID, member.MemberEmail);
         }
 
 

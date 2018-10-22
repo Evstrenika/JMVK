@@ -16,23 +16,25 @@ namespace Collaboro.Pages
         public BookMeeting()
         {
             InitializeComponent();
+
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            // TEMPORARY UNTIL LOGIN DETAILS SAVED **
-            string email = "hithere@gmail.com";
+            groupsList.ItemsSource = await GetGroupList();
+        }
 
-            List<Member> memberships = await App.DatabaseManager.GetStudentMemberships(email);
+        private async Task<List<Group>> GetGroupList()
+        {
+            List<Member> memberships = await App.DatabaseManager.GetStudentMemberships(App.AccountEmail);
             List<Group> groups = new List<Group>();
             foreach (Member member in memberships)
             {
                 groups.Add(await App.DatabaseManager.GetGroupAsync(member.GroupID));
             }
-
-            groupsList.ItemsSource = groups;
+            return groups;
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
