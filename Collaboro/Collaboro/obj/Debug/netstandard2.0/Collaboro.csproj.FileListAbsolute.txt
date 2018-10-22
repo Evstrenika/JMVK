@@ -152,3 +152,5 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.dll
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.pdb
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\AvailabilityPage.xaml.g.cs
+C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\AvailabilityPage.xaml.g.cs
+C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache

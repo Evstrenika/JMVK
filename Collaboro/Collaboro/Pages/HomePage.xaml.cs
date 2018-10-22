@@ -13,24 +13,21 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        string email;
-
         public HomePage(string user)
         {
             InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, "Back");
-            email = user;
+            App.AccountEmail = user;
         }
 
-        protected override void OnAppearing()   // aync temporarily removed
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
             
             // -- Show Notifications --
-            /*      COMMENTED OUT WHILE DATABASES BEING FIXED   TO DO
             // People have accepted request
-            List<Member> memberOf = await App.DatabaseManager.GetStudentMemberships(email);
+            List<Member> memberOf = await App.DatabaseManager.GetStudentMemberships(App.AccountEmail);
             foreach (Member group in memberOf)
             {
                 Group team = await App.DatabaseManager.GetGroupAsync(group.GroupID);
@@ -46,7 +43,7 @@ namespace Collaboro
             }
 
             // Offers to join a group
-            List<Member> offered = await App.DatabaseManager.GetPendingStudentMemberships(email);
+            List<Member> offered = await App.DatabaseManager.GetPendingStudentMemberships(App.AccountEmail);
             foreach (Member offer in offered)
             {
                 Group team = await App.DatabaseManager.GetGroupAsync(offer.GroupID);
@@ -60,7 +57,7 @@ namespace Collaboro
                 {
                     await App.DatabaseManager.RemoveMemberAsync(offer);
                 }
-            }*/
+            }
         }
     }
 }

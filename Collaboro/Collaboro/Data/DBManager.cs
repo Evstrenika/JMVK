@@ -16,6 +16,11 @@ namespace Collaboro
 		}
 
         // Students
+        public Task<int> ReturnNumStudents()
+        {
+            return DbService.ReturnNumStudents();
+        }
+
 		public Task<List<Student>> ReturnStudentsAsync ()
 		{
 			return DbService.GetStudentsAsync ();	
@@ -38,7 +43,7 @@ namespace Collaboro
 
 
         // Availability      
-        public Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time)
+        public Task<List<UserAvailability>> GetPotentialMembersAsync(string code, string day, string time)
         {
             return DbService.GetPotentialMembersAsync(code, day, time);
         } 

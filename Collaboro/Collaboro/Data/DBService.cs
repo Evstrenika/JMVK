@@ -18,22 +18,20 @@ namespace Collaboro
 
         private void CreateTables()
         {
-            try
-            {
-                //database.CreateTableAsync<Student>().Wait();
-                //database.CreateTableAsync<Availability>().Wait();
-                database.CreateTableAsync<Group>().Wait();
-                database.CreateTableAsync<Member>().Wait();
-                database.CreateTableAsync<Meeting>().Wait();
-            }
-            catch
-            {
-                // Above already added
-            }
+            database.CreateTableAsync<Student>().Wait();
+            database.CreateTableAsync<UserAvailability>().Wait();
+            database.CreateTableAsync<Group>().Wait();
+            database.CreateTableAsync<Member>().Wait();
+            database.CreateTableAsync<Meeting>().Wait();
         }
 
 
         // Student Commands
+        public Task<int> ReturnNumStudents()
+        {
+            return database.Table<Student>().CountAsync();
+        }
+
         public Task<Student> GetStudentAsync(string email)
         {
             return database.Table<Student>().Where(i => i.Email == email).FirstOrDefaultAsync();
@@ -56,9 +54,9 @@ namespace Collaboro
 
         
         // Availability Commands
-        public Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time)
+        public Task<List<UserAvailability>> GetPotentialMembersAsync(string code, string day, string time)
         {
-            return database.Table<Availability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
+            return database.Table<UserAvailability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
         } 
         
 
@@ -90,12 +88,12 @@ namespace Collaboro
 
         public Task MemberDisplayed(Member member)
         {
-            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Displayed='true' WHERE GroupID=? && MemberEmail=?", member.GroupID, member.MemberEmail);
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Displayed='true' WHERE GroupID=? AND MemberEmail=?", member.GroupID, member.MemberEmail);
         }
 
         public Task AcceptMembership(Member member)
         {
-            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed='true' WHERE GroupID=? && MemberEmail=?", member.GroupID, member.MemberEmail);
+            return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed='true' WHERE GroupID=? AND MemberEmail=?", member.GroupID, member.MemberEmail);
         }
 
 

@@ -15,7 +15,6 @@ namespace Collaboro.Data
         public Database(string dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Student>().Wait();
         }
 
         public Task<List<Student>> GetItemsAsync()

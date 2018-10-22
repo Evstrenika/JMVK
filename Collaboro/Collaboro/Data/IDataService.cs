@@ -7,6 +7,8 @@ namespace Collaboro
 	public interface IDataService
 	{
         // Students
+        Task<int> ReturnNumStudents();
+
         Task<Student> GetStudentAsync(string email);
 
         Task<List<Student>> GetStudentsAsync();
@@ -17,7 +19,7 @@ namespace Collaboro
 
 
         // Availbility
-        Task<List<Availability>> GetPotentialMembersAsync(string code, string day, string time);
+        Task<List<UserAvailability>> GetPotentialMembersAsync(string code, string day, string time);
 
 
         // Member

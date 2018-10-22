@@ -1,5 +1,4 @@
-﻿//using Collaboro.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,6 +17,7 @@ namespace Collaboro
     public partial class App : Application
     {
         public static DBManager DatabaseManager { get; private set; }
+        public static string AccountEmail { get; set; }
 
         public App()
         {
@@ -34,7 +34,7 @@ namespace Collaboro
         
         private async void StaticDatabasePrototyping()
         {
-            try
+            if (await DatabaseManager.ReturnNumStudents() == 0)
             {
                 Student jason = new Student();
                 jason.Email = "j@g.com";
@@ -42,25 +42,40 @@ namespace Collaboro
                 jason.Surname = "Smith";
                 jason.University = "QUT";
                 jason.Password = "222222";
-                await App.DatabaseManager.RecordStudentAsync(jason);
+                await DatabaseManager.RecordStudentAsync(jason);
+
+                Student frank = new Student();
+                frank.Email = "frank@gmail.com";
+                frank.FirstName = "Frank";
+                frank.Surname = "Martin";
+                frank.University = "QUT";
+                frank.Password = "333333";
+                await DatabaseManager.RecordStudentAsync(frank);
             }
-            catch
+
+            if (await DatabaseManager.GetGroupAsync(1) == null)
             {
-                // Above already added
+                Group team = new Group();
+                team.SubjectCode = "IAB330";
+                team.NumberMembers = 2;
+                await DatabaseManager.AddGroupAsync(team);
+
+                Member frankOwner = new Member();
+                frankOwner.MemberEmail = "frank@gmail.com";
+                frankOwner.GroupID = 1;
+                frankOwner.Displayed = true;
+                frankOwner.Confirmed = true;
+                await DatabaseManager.AddMemberAsync(frankOwner);
+
+                Member jasonMember = new Member();
+                jasonMember.MemberEmail = "j@g.com";
+                jasonMember.GroupID = 1;
+                jasonMember.Displayed = false;
+                jasonMember.Confirmed = false;
+                await DatabaseManager.AddMemberAsync(jasonMember);
             }
         }
-        
-        /*public static Database Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new Database(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
-                }
-                return database;
-            }
-        }*/
+       
 
         protected override void OnStart()
         {
