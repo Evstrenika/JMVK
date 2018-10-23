@@ -18,7 +18,7 @@
                 <Label Text="I have class" Grid.Column="1" FontSize="Small" VerticalOptions="Start"/>
                 <Label Text="I'm busy" Grid.Column="2" FontSize="Small" VerticalOptions="Start" />
             </Grid>
-            <ListView x:Name="SundayList"  BackgroundColor="LightBlue">
+            <ListView x:Name="SundayList"  BackgroundColor="LightBlue" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
