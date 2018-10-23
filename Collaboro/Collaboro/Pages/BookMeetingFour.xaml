@@ -18,7 +18,7 @@
                 FontSize="Large"
                 FontAttributes="Bold"/>
 
-            <!-- Meeting time details -->
+            <!-- Meeting time details - Book meeting values received from previous page-->
             <Label Text="Monday, 3pm - 4pm"
                 VerticalOptions="Start" 
                 HorizontalOptions="StartAndExpand" 

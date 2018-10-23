@@ -12,7 +12,7 @@ namespace Collaboro.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookMeetingFour : ContentPage
     {
-        public BookMeetingFour()
+        public BookMeetingFour(string day, double length, string startTime)
         {
             InitializeComponent();
         }

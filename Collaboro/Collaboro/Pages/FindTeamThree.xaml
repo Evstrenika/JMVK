@@ -11,10 +11,30 @@
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <!-- Bio heading -->
+            <Label Text="Bio"
+                   HeightRequest="40"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="StartAndExpand" 
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
 
+            <!-- Bio details -->
+            <!-- Need to implement -->
+            
+
+            <!-- Skills heading -->
+            <Label Text="Skills"
+                   HeightRequest="40"
+                  VerticalOptions="Start" 
+                  HorizontalOptions="StartAndExpand" 
+                  FontSize="Large"
+                  FontAttributes="Bold"/>
+
+            <!-- Skill details -->
+            <!-- Need to implement -->
+
+            <!-- Invite to team button -->
             <Button Text="Invite to Team"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
