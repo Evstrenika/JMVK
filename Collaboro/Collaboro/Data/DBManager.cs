@@ -47,6 +47,16 @@ namespace Collaboro
         {
             return DbService.GetPotentialMembersAsync(code, day, time);
         } 
+        // something that will add a new time to the table
+        public Task AddAvailabilityAsync(UserAvailability userAvailability)
+        {
+            return DbService.AddAvailabilityAsync(userAvailability);
+        }
+        // searches for if the availability exists
+        public Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time)
+        {
+            return DbService.AvailabilityExists(email, day, time);
+        }
 
 
         // Member Commands

@@ -11,7 +11,7 @@ namespace Collaboro.Models
     {
         [PrimaryKey, Unique, AutoIncrement]
         public int AvailabilityID { get; set; }
-        public string Email { get; set; }
+        public string Email { get; set; }       // FK from UserAvailability
         public string Day { get; set; }
         public string Time { get; set; }
         public string Activity { get; set; }    // May be a class

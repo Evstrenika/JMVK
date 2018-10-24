@@ -10,8 +10,8 @@ namespace Collaboro.Models
     public class Group
     {
         [PrimaryKey, Unique, AutoIncrement]
-        public int ID { get; set; }
+        public int ID { get; set; }    // this is the PK for Group
         public string SubjectCode { get; set; }
-        public int NumberMembers { get; set; }
+        public int NumberMembers { get; set; }  // the max number of members possible for this group
     }
 }

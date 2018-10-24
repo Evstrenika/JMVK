@@ -21,6 +21,9 @@ namespace Collaboro
         // Availbility
         Task<List<UserAvailability>> GetPotentialMembersAsync(string code, string day, string time);
 
+        Task AddAvailabilityAsync(UserAvailability userAvailability);
+
+        Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time);
 
         // Member
         Task AddMemberAsync(Member member);

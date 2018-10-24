@@ -138,7 +138,6 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\FindT
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\HomePage.xaml.g.cs
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\LogInPage.xaml.g.cs
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\ProfileInvite.xaml.g.cs
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\SignUpPage.xaml.g.cs
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Weekdays\Friday.xaml.g.cs
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Weekdays\Monday.xaml.g.cs

@@ -11,7 +11,7 @@ namespace Collaboro.Models
     {
         [PrimaryKey, Unique, AutoIncrement]
         public int MeetingID { get; set; }
-        public int GroupID { get; set; }
+        public int GroupID { get; set; }    // FK from Group
         public string Day { get; set; }
         public string Time { get; set; }
         public string Location { get; set; }

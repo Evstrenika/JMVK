@@ -57,8 +57,24 @@ namespace Collaboro
         public Task<List<UserAvailability>> GetPotentialMembersAsync(string code, string day, string time)
         {
             return database.Table<UserAvailability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
+        }
+
+        // something that will add a new time to the table
+        public Task AddAvailabilityAsync(UserAvailability userAvailability)
+        {
+            return database.InsertAsync(userAvailability);
+        }
+
+
+        public Task RemoveAvailabilityAsync(UserAvailability userAvailability)
+        {
+            return database.DeleteAsync(userAvailability);
+        }
+        // check if the availability exists
+        public Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time)
+        {
+            return database.Table<UserAvailability>().Where(i => i.Email == email && i.Day == day && i.Time == time).ToListAsync();
         } 
-        
 
         // Member Commands
         public Task AddMemberAsync(Member member)

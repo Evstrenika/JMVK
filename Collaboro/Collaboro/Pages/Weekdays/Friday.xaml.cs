@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -120,5 +121,32 @@ namespace Collaboro
 
             }
         }
+
+        // if update button is clicked, update the database with the time, date
+        /*
+        private async void btnUpdate_isCicked()
+        {
+
+           UserAvailability availabilitySlot = new UserAvailability();
+            availabilitySlot.Email = App.AccountEmail;
+            availabilitySlot.Day = "Friday";
+            availabilitySlot.Time = ""; // gives the start time
+            availabilitySlot.Activity = "";
+            
+            for (int i = 0; i <= maxNumInstantiated; i++)
+            {
+                if (App.DatabaseManager.AvailabilityExists())
+                {
+                    fList[i].ClassAtThisTime = false;
+                    fList[i].OtherwiseBusy = false;
+                    fList[i].ClassBusyEnabled = true;
+                    fList[i].OtherBusyEnabled = true;
+                }
+
+            }
+
+            await App.DatabaseManager.AddAvailabilityAsync(availabilitySlot);
+        }
+        */
     }
 }
