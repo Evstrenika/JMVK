@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -117,9 +118,77 @@ namespace Collaboro
                     tList[i].ClassBusyEnabled = true;
                     tList[i].OtherBusyEnabled = true;
                 }
-
-
+                
             }
-        }
-    }
+        }   // end of clear button is clicked method
+
+        // **********************************************************************************************
+
+        /// <summary>
+        /// takes care of the case in which the update button is clicked
+        /// updates the database
+        /// if the timeslot already exists, it updates it or deletes it as necessary
+        /// if it doesn't already exist, it adds it if necessary
+        /// </summary>
+        private async void btnUpdate_isClicked()
+        {
+            UserAvailability availabilitySlot = new UserAvailability();
+            availabilitySlot.Email = App.AccountEmail;
+            availabilitySlot.Day = "Friday";
+
+            for (int i = 0; i <= maxNumInstantiated; i++)
+            {
+                //  add the time to it
+                availabilitySlot.Time = tList[i].StartTime; // gives the start time as a string
+
+                // find out what type of activity it was, if it was neither, call it ""
+                if (tList[i].ClassAtThisTime)
+                {
+                    // eventually, we can find out what this class is, but for now, just say
+                    availabilitySlot.Activity = "class";
+                }
+                else if (tList[i].OtherwiseBusy)
+                {
+                    // call it busy
+                    availabilitySlot.Activity = "busy";
+                }
+                else
+                {
+                    // we know that there's no activity
+                    availabilitySlot.Activity = "";
+                }
+
+                // check if it exists (and create a list)
+                List<UserAvailability> userAvailibilitiesList = await App.DatabaseManager.AvailabilityExists(availabilitySlot.Email, availabilitySlot.Day, availabilitySlot.Time);
+
+                // if there is no existing availability slot like that, make one
+                if (userAvailibilitiesList.Count == 0)
+                {
+                    // check if the availabilitySlot's activity is empty.. if it is, we don't need
+                    // to bother adding availabilitySlot to the database
+                    if (availabilitySlot.Activity != "")
+                    {
+                        // and then update the database with this availability slot
+                        await App.DatabaseManager.AddAvailabilityAsync(availabilitySlot);
+                    }
+                }
+                else
+                {
+                    // we know it already exists, so we just update it with the first thing in the list, which
+                    // should be the only thing in the list
+                    // although, if the new activity is "", we should just get it over with and delete
+                    // the slot from the database
+                    if (availabilitySlot.Activity == "")
+                    {
+                        await App.DatabaseManager.RemoveAvailabilityAsync(userAvailibilitiesList[0]);
+                    }
+                    else
+                    {
+                        await App.DatabaseManager.AlterActivityAsync(availabilitySlot, userAvailibilitiesList[0]);
+                    }
+                }
+            }
+        }   // end Update button clicked method
+
+    }   // end of partial class
 }

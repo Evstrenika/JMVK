@@ -23,7 +23,11 @@ namespace Collaboro
 
         Task AddAvailabilityAsync(UserAvailability userAvailability);
 
-        Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time);
+        Task<List<UserAvailability>> AvailabilityExistsAsync(string email, string day, string time);
+
+        Task AlterActivityAsync(UserAvailability newUserAvailability, UserAvailability oldUserAvailability);
+
+        Task RemoveAvailabilityAsync(UserAvailability userAvailability);
 
         // Member
         Task AddMemberAsync(Member member);

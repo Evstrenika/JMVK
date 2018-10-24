@@ -123,30 +123,84 @@ namespace Collaboro
         }
 
         // if update button is clicked, update the database with the time, date
-        /*
-        private async void btnUpdate_isCicked()
+        
+        private async void btnUpdate_isClicked()
         {
 
            UserAvailability availabilitySlot = new UserAvailability();
             availabilitySlot.Email = App.AccountEmail;
             availabilitySlot.Day = "Friday";
-            availabilitySlot.Time = ""; // gives the start time
+            
             availabilitySlot.Activity = "";
+            int length = 0;
             
             for (int i = 0; i <= maxNumInstantiated; i++)
             {
-                if (App.DatabaseManager.AvailabilityExists())
+                //  add the time to it
+                availabilitySlot.Time = fList[i].StartTime; // gives the start time as a string
+
+                // find out what type of activity it was, if it was neither, call it ""
+                if (fList[i].ClassAtThisTime)
                 {
-                    fList[i].ClassAtThisTime = false;
-                    fList[i].OtherwiseBusy = false;
-                    fList[i].ClassBusyEnabled = true;
-                    fList[i].OtherBusyEnabled = true;
+                    // eventually, we can find out what this class is, but for now, just say
+                    availabilitySlot.Activity = "class";
+                }
+                else if (fList[i].OtherwiseBusy)
+                {
+                    // call it busy
+                    availabilitySlot.Activity = "busy";
+                    }
+                else
+                {
+                    // we know that there's no activity
+                    availabilitySlot.Activity = "";
                 }
 
+                // check if it exists (and create a list)
+                List<UserAvailability> userAvailibilitiesList= await App.DatabaseManager.AvailabilityExists(availabilitySlot.Email, availabilitySlot.Day, availabilitySlot.Time);
+                //List<UserAvailability> testing;
+
+                length = userAvailibilitiesList.Count();
+
+                // if there is no existing availability slot like that, make one
+                if (userAvailibilitiesList.Count == 0)
+                {
+                    // check if the availabilitySlot's activity is empty.. if it is, we don't need
+                    // to bother adding availabilitySlot to the database
+                    if(availabilitySlot.Activity != "")
+                    {
+                        // and then update the database with this availability slot
+                        await App.DatabaseManager.AddAvailabilityAsync(availabilitySlot);
+                        // for testing purposes
+
+                        //testing = await App.DatabaseManager.AvailabilityExists(availabilitySlot.Email, availabilitySlot.Day, availabilitySlot.Time);
+                        //await DisplayAlert("Mwahaha", "i just added an availability slot... I think" + testing[0].Activity, "No, don't do it!");
+                    }
+                }
+                else
+                {
+                    // we know it already exists, so we just update it with the first thing in the list, which
+                    // should be the only thing in the list
+                    // although, if the new activity is "", we should just get it over with and delete
+                    // the slot from the database
+                    if(availabilitySlot.Activity == "")
+                    {
+                        
+                        //await DisplayAlert("Mwahaha", "removing availability" , "No, don't do it!");
+                        await App.DatabaseManager.RemoveAvailabilityAsync(userAvailibilitiesList[0]);
+                    }
+                    else
+                    {
+                        await App.DatabaseManager.AlterActivityAsync(availabilitySlot, userAvailibilitiesList[0]);
+                        //testing = await App.DatabaseManager.AvailabilityExists(availabilitySlot.Email, availabilitySlot.Day, availabilitySlot.Time);
+                        //await DisplayAlert("Mwahaha", "i just added an availability slot... I think" + testing[0].Activity, "No, don't do it!");
+                    }
+                }
+                
             }
 
-            await App.DatabaseManager.AddAvailabilityAsync(availabilitySlot);
+            
         }
-        */
+        
     }
 }

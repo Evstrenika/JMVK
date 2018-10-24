@@ -308,3 +308,4 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.iOS\obj\iPhoneSimulator\Debug\XamlC.
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.iOS\obj\iPhoneSimulator\Debug\Collaboro.iOS.csproj.CopyComplete
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.iOS\obj\iPhoneSimulator\Debug\Collaboro.iOS.exe
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.iOS\obj\iPhoneSimulator\Debug\Collaboro.iOS.pdb
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.iOS\bin\iPhoneSimulator\Debug\Collaboro.dll.mdb

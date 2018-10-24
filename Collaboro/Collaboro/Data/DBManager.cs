@@ -55,7 +55,17 @@ namespace Collaboro
         // searches for if the availability exists
         public Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time)
         {
-            return DbService.AvailabilityExists(email, day, time);
+            return DbService.AvailabilityExistsAsync(email, day, time);
+        }
+        // alters the already existing availability slot
+        public Task AlterActivityAsync(UserAvailability newUserAvailability, UserAvailability oldUserAvailability)
+        {
+            return DbService.AlterActivityAsync(newUserAvailability, oldUserAvailability);
+        }
+        // delete the availability
+        public Task RemoveAvailabilityAsync(UserAvailability userAvailability)
+        {
+            return DbService.RemoveAvailabilityAsync(userAvailability);
         }
 
 

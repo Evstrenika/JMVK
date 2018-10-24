@@ -64,17 +64,22 @@ namespace Collaboro
         {
             return database.InsertAsync(userAvailability);
         }
-
-
+        // remove the availability
         public Task RemoveAvailabilityAsync(UserAvailability userAvailability)
         {
             return database.DeleteAsync(userAvailability);
         }
         // check if the availability exists
-        public Task<List<UserAvailability>> AvailabilityExists(string email, string day, string time)
+        public Task<List<UserAvailability>> AvailabilityExistsAsync(string email, string day, string time)
         {
             return database.Table<UserAvailability>().Where(i => i.Email == email && i.Day == day && i.Time == time).ToListAsync();
         } 
+        // alter the availability
+        public Task AlterActivityAsync(UserAvailability newUserAvailability, UserAvailability oldUserAvailability)
+        {
+            database.DeleteAsync(oldUserAvailability);
+            return database.InsertAsync(newUserAvailability);
+        }
 
         // Member Commands
         public Task AddMemberAsync(Member member)
