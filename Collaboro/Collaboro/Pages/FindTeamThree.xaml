@@ -6,6 +6,7 @@
 
 
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
@@ -52,5 +53,6 @@
                     BackgroundColor="AliceBlue"/>
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

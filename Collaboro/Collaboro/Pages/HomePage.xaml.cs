@@ -47,8 +47,10 @@ namespace Collaboro
             foreach (Member offer in offered)
             {
                 Group team = await App.DatabaseManager.GetGroupAsync(offer.GroupID);
+                Student founder = await App.DatabaseManager.GetTeamFounder(team);
 
-                var answer = await DisplayAlert(team.SubjectCode, "Group Offer for " + team.SubjectCode, "Accept", "Deny");
+                var answer = await DisplayAlert(team.SubjectCode, 
+                    "Group Offer for " + team.SubjectCode + " from " + founder.FirstName + " " + founder.Surname, "Accept", "Deny");
                 if (answer == true) // Accept
                 {
                     await App.DatabaseManager.AcceptMembership(offer);

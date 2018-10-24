@@ -7,22 +7,23 @@
     
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
+        <ScrollView>
+            <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
             <Label Text="{Binding Source={x:Reference stepper},
                               Path=Value,
-                              StringFormat='Meeting goes for {0} hours'}"
+                              StringFormat='Meeting goes for {0} hour(s)'}"
                    TextColor="Black"
                    FontSize="Small"
                    VerticalOptions="CenterAndExpand"/>
 
             <Stepper x:Name="stepper"
-                 Minimum="0.5"
+                 Minimum="1"
                  Maximum="6"
-                 Increment="0.5"
+                 Increment="1"
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand" />
 
@@ -85,5 +86,6 @@
                     BackgroundColor="AliceBlue"/>
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

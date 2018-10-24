@@ -40,6 +40,8 @@ namespace Collaboro
 
         Task AcceptMembership(Member member);
 
+        Task<Student> GetTeamFounder(Group group);
+
 
         // Group
         Task AddGroupAsync(Group group);

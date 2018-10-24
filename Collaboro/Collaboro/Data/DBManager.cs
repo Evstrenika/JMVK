@@ -95,6 +95,10 @@ namespace Collaboro
             return DbService.AcceptMembership(member);
         }
 
+        public Task<Student> GetTeamFounder(Group group)
+        {
+            return DbService.GetTeamFounder(group);
+        }
 
 
         // Group Commands

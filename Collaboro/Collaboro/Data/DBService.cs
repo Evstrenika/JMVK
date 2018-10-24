@@ -94,7 +94,7 @@ namespace Collaboro
 
         public Task<List<Member>> GetStudentMemberships(string email)
         {
-            return database.Table<Member>().Where(i => i.MemberEmail == email).ToListAsync();   //&& i.Confirmed == true
+            return database.Table<Member>().Where(i => i.MemberEmail == email && i.Confirmed == true).ToListAsync();
         }
 
         public Task<List<Member>> GetPendingStudentMemberships(string email)
@@ -110,6 +110,12 @@ namespace Collaboro
         public Task AcceptMembership(Member member)
         {
             return database.ExecuteScalarAsync<bool>("UPDATE Member SET Confirmed=? WHERE GroupID=? AND MemberEmail=?", true, member.GroupID, member.MemberEmail);
+        }
+
+        public async Task<Student> GetTeamFounder(Group group)
+        {
+            Member founder =  await database.Table<Member>().Where(i => i.GroupID == group.ID && i.Displayed == true).FirstOrDefaultAsync();
+            return await database.Table<Student>().Where(i => i.Email == founder.MemberEmail).FirstOrDefaultAsync();
         }
 
 

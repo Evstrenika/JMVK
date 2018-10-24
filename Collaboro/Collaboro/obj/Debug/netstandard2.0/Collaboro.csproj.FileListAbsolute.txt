@@ -92,7 +92,6 @@ C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Col
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.dll
 C:\Users\jodie\Documents\0 Documents\University\IAB330\GitHub\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.pdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Availability.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\BookMeeting.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\BookMeetingFour.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\BookMeetingThree.xaml.g.cs
@@ -103,7 +102,6 @@ C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\HomePage.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\LogInPage.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\ProfileInvite.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\SignUpPage.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Weekdays\Friday.xaml.g.cs
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Weekdays\Monday.xaml.g.cs
@@ -122,7 +120,6 @@ C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Colla
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.pdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\AvailabilityPage.xaml.g.cs
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.deps.json
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.dll
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.pdb
@@ -152,3 +149,4 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.A
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.dll
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.pdb
+C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache

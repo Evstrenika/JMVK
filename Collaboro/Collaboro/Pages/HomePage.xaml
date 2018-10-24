@@ -16,46 +16,50 @@
             <Label Text="Collaboro" 
                    HorizontalOptions="Center" 
                    VerticalOptions="Start" 
-                   FontSize="Medium"
+                   FontSize="Large"
                    TextColor="Black"/>
             
             <Button Text="Find Team" 
                     VerticalOptions="CenterAndExpand"
-                    HeightRequest="80"
                     HorizontalOptions="Center"
                     BackgroundColor="AliceBlue"
+                    HeightRequest="100"
+                    WidthRequest="300"
                     TextColor="Black"
-                    FontSize="Small"
+                    FontSize="Medium"
                     Command="{Binding FindTeamButtonClick}">
             </Button>
 
             <Button Text="Book Meeting" 
                     VerticalOptions="CenterAndExpand"
-                    HeightRequest="80"
                     HorizontalOptions="Center"
                     BackgroundColor="AliceBlue"
+                    HeightRequest="100"
+                    WidthRequest="300"
                     TextColor="Black"
-                    FontSize="Small"
+                    FontSize="Medium"
                     Command="{Binding BookMeetingClick}">
             </Button>
             
             <Button Text="Availability" 
                     VerticalOptions="CenterAndExpand"
-                    HeightRequest="80"
                     HorizontalOptions="Center"
                     BackgroundColor="AliceBlue"
+                    HeightRequest="100"
+                    WidthRequest="300"
                     TextColor="Black"
-                    FontSize="Small"
+                    FontSize="Medium"
                     Command="{Binding AvailabilityClick}">
             </Button>
             
             <Button Text="Profile" 
                     VerticalOptions="CenterAndExpand"
-                    HeightRequest="80"
                     HorizontalOptions="Center"
                     BackgroundColor="AliceBlue"
+                    HeightRequest="100"
+                    WidthRequest="300"
                     TextColor="Black"
-                    FontSize="Small"
+                    FontSize="Medium"
                     IsEnabled="False">
             </Button>
         </StackLayout>
