@@ -99,9 +99,7 @@ C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid8
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.dll
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Collaboro.Android.pdb
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\bin\Debug\Collaboro.dll.mdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Collaboro.dll.mdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb

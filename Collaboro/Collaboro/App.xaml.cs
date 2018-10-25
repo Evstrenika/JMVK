@@ -377,7 +377,7 @@ namespace Collaboro
                 await DatabaseManager.AddMemberAsync(frankOwner);
 
                 Member jasonMember = new Member();
-                jasonMember.MemberEmail = "j@g.com";
+                jasonMember.MemberEmail = "jason@gmail.com";
                 jasonMember.GroupID = 1;
                 jasonMember.Displayed = false;
                 jasonMember.Confirmed = false;
