@@ -15,15 +15,16 @@ namespace Collaboro.Pages
     {
         private Group team;
         private UserAvailability booking;
+        private int length;
+        private string[] times = new string[] {"12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am",
+                                            "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"};
 
         public BookMeetingFour(Group team, UserAvailability time, double length)
         {
             InitializeComponent();
             this.team = team;
             booking = time;
-
-            string[] times = new string[] {"12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am",
-                                            "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"};
+            this.length = (int)length;
 
             string endTime = times[(Array.IndexOf(times, time.Time) + (int)length)%24];
             Chosen.Text = time.Day + " " + time.Time + " to " + endTime;
@@ -33,10 +34,14 @@ namespace Collaboro.Pages
         {
             // Add meeting to members' availability
             List<Member> memberships = await App.DatabaseManager.GetTeamMembers(team);
-            foreach (Member member in memberships)
+            for (int increase = 0; increase < length; increase++)
             {
-                booking.Email = member.MemberEmail;
-                await App.DatabaseManager.AddAvailabilityAsync(booking);
+                foreach (Member member in memberships)
+                {
+                    booking.Email = member.MemberEmail;
+                    await App.DatabaseManager.AddAvailabilityAsync(booking);
+                }
+                booking.Time = times[(Array.IndexOf(times, booking.Time) + 1) % 24];
             }
 
             // Add Meeting

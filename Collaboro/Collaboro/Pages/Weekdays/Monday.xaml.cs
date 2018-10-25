@@ -14,7 +14,7 @@ namespace Collaboro
     public partial class Monday : ContentPage
     {
         // new List rList to hold all the values of TimeSlot
-        public List<TimeSlot> mList = new List<TimeSlot> { };
+        public List<TimeSlot> mList = new List<TimeSlot>();
         private int maxNumInstantiated = 0; // will count how many TimeSlot cells are available
 
         public Monday()
@@ -42,13 +42,13 @@ namespace Collaboro
                 List<UserAvailability> hourSlot = await App.DatabaseManager.AvailabilityExists(App.AccountEmail, "Monday", times[hour]);
                 if (hourSlot.Count() > 0 && hourSlot[0].Activity != null && (hourSlot[0].Activity == "Busy" || hourSlot[0].Activity == "Meeting"))
                 {
-                    mList[hour].OtherBusyEnabled = true;
+                    mList[hour].OtherwiseBusy = true;
                     mList[hour].ClassBusyEnabled = false;
                 } 
                 else if (hourSlot.Count() > 0)
                 {
                     mList[hour].OtherBusyEnabled = false;
-                    mList[hour].ClassBusyEnabled = true;
+                    mList[hour].ClassAtThisTime = true;
                 }
             }
         }

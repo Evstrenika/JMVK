@@ -32,7 +32,7 @@ namespace Collaboro
             set
             {
                 classAtThisTime = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("ClassAtThisTime"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ClassAtThisTime"));
             }
         }
 
@@ -50,7 +50,7 @@ namespace Collaboro
             set
             {
                 otherwiseBusy = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("OtherwiseBusy"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("OtherwiseBusy"));
             }
         }
 
@@ -67,7 +67,7 @@ namespace Collaboro
             set
             {
                 classBusyEnabled = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("ClassBusyEnabled"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ClassBusyEnabled"));
             }
         }
 
@@ -84,7 +84,7 @@ namespace Collaboro
             set
             {
                 otherBusyEnabled = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("OtherBusyEnabled"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("OtherBusyEnabled"));
             }
         }
 
@@ -115,9 +115,6 @@ namespace Collaboro
 
             // check if this time slot already exists, and do fix the buttons appropriately
             ExistsInDB(day);
-
-
-
         }   // end of TimeSlot constructor
 
         /// <summary>

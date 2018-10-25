@@ -28,6 +28,29 @@ namespace Collaboro
             }
             satList.Add(new TimeSlot(23, 0, "Saturday"));
             SaturdayList.ItemsSource = satList;
+
+            InitialiseAvailability();
+        }
+
+        private async void InitialiseAvailability()
+        {
+            string[] times = new string[] {"12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am",
+                                            "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"};
+
+            for (int hour = 0; hour < 24; hour++)
+            {
+                List<UserAvailability> hourSlot = await App.DatabaseManager.AvailabilityExists(App.AccountEmail, "Saturday", times[hour]);
+                if (hourSlot.Count() > 0 && hourSlot[0].Activity != null && (hourSlot[0].Activity == "Busy" || hourSlot[0].Activity == "Meeting"))
+                {
+                    satList[hour].OtherwiseBusy = true;
+                    satList[hour].ClassBusyEnabled = false;
+                }
+                else if (hourSlot.Count() > 0)
+                {
+                    satList[hour].OtherBusyEnabled = false;
+                    satList[hour].ClassAtThisTime = true;
+                }
+            }
         }
 
         /// <summary>
