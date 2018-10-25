@@ -54,10 +54,14 @@ namespace Collaboro.Pages
                         bool busy = false;
                         foreach (Member member in memberships)
                         {
-                            List<UserAvailability> isAvailable = await App.DatabaseManager.AvailabilityExists(member.MemberEmail, day, time);
-                            if (isAvailable.Count() > 0)
+                            for (int timeSpent = 0; timeSpent < length; timeSpent++)
                             {
-                                busy = true;
+                                string currentTime = times[(Array.IndexOf(times, time) + timeSpent) % 24];
+                                List<UserAvailability> isAvailable = await App.DatabaseManager.AvailabilityExists(member.MemberEmail, day, currentTime);
+                                if (isAvailable.Count() > 0)
+                                {
+                                    busy = true;
+                                }
                             }
                         }
 

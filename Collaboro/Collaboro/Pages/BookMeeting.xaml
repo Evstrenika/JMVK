@@ -4,11 +4,10 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.BookMeeting"
              Title="Select Group">
-    
-    
+
+
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
@@ -26,6 +25,5 @@
             </ListView>
 
         </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
