@@ -24,9 +24,9 @@ namespace Collaboro
             // creates all the TimeSlots and places them into cells which become the source for ThursdayList
             for (int i = 0; i < 23; i++)
             {
-                satList.Add(new TimeSlot(i, i + 1));
+                satList.Add(new TimeSlot(i, i + 1, "Saturday"));
             }
-            satList.Add(new TimeSlot(23, 0));
+            satList.Add(new TimeSlot(23, 0, "Saturday"));
             SaturdayList.ItemsSource = satList;
         }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace Collaboro {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUpPage : ContentPage {
+
         public SignUpPage()
         {
             InitializeComponent();
@@ -34,82 +36,69 @@ namespace Collaboro {
                     await Navigation.PushAsync(new HomePage(emailAddressEntry.Text));
                 }
             }
-            else
-            {
-                // something is not valid, so respond to the validation
-            }
         }
 
         // checks if everything is valid and returns true if it is
         public bool IsValid()
         {
-            string firstName = firstNameEntry.Text;
-            string surname = surnameEntry.Text;
-            string email = emailAddressEntry.Text;
-            string confirmEmail = confirmEmailAdressEntry.Text;
-            string pass = passwordEntry.Text;
-            string confirmPass = confirmPasswordEntry.Text;
-            int uni = universityPicker.SelectedIndex;
-            bool tc = acceptTC.IsToggled;
+            Regex firstNameRegex = new Regex(@"^([A-Z][a-z]+)(-[A-Z][a-z]+)?$");
+            Regex surnameRegex = new Regex(@"^([A-Z][A-Za-z]+)(-[A-Z][A-Za-z]+)?$");
+            Regex emailRegex = new Regex(@"^[A-Za-z0-9!#$%^&*]+[@][A-Za-z]+[.][A-Za-z.]+$");
 
-            if (firstNameValid(firstName) && surnameValid(surname) && emailValid(email, confirmEmail)
-                && passwordValid(pass, confirmPass))
+            if (firstNameEntry.Text == null || !firstNameRegex.IsMatch(firstNameEntry.Text))
             {
-                return true;
-            }
-            else
-            {
+                Error.Text = "Please enter your name using correct punctuation.";
+                Error.IsVisible = true;
                 return false;
             }
-        }
-
-        // needs some work
-        // checks if the first name is valid
-        public bool firstNameValid(string firstName)
-        {
-            if(firstName != null)
+            else if (surnameEntry.Text == null || !surnameRegex.IsMatch(surnameEntry.Text))
             {
-                return true;
+                Error.Text = "Please enter your surname using correct punctuation.";
+                Error.IsVisible = true;
+                return false;
             }
-            return false;
-        }
-
-        // needs some work
-        // checks if the surname name is valid
-        public bool surnameValid(string surname)
-        {
-            if (surname != null)
+            else if (emailAddressEntry.Text == null || confirmEmailAdressEntry.Text == null || 
+                        emailAddressEntry.Text != confirmEmailAdressEntry.Text || !emailRegex.IsMatch(emailAddressEntry.Text))
             {
-                return true;
+                Error.IsVisible = true;
+                if (emailAddressEntry.Text != confirmEmailAdressEntry.Text)
+                {
+                    Error.Text = "Emails do not match.";
+                }
+                else
+                {
+                    Error.Text = "Please enter a valid email address.";
+                }
+                return false;
             }
-            return false;
-        }
-
-        // needs some work
-        // checks if the email & confirmation email are valid
-        public bool emailValid(string email, string confirmEmail)
-        {
-            if (email != null && email == confirmEmail)
+            else if (passwordEntry.Text == null || confirmPasswordEntry.Text == null ||
+                passwordEntry.Text != confirmPasswordEntry.Text || passwordEntry.Text.Length < 5)
             {
-                return true;
+                Error.IsVisible = true;
+                if (passwordEntry.Text != confirmPasswordEntry.Text)
+                {
+                    Error.Text = "Passwords do not match.";
+                }
+                else
+                {
+                    Error.Text = "Password must be at least 5 characters long.";
+                }
+                return false;
             }
-            return false;
-        }
-
-        // needs some work
-        // checks if the surname name is valid
-        public bool passwordValid(string pass, string confirmPass)
-        {
-            if (pass != null && pass == confirmPass)
+            else if (universityPicker.SelectedIndex == -1)
             {
-                return true;
+                Error.Text = "Please select a university from the drop down.";
+                Error.IsVisible = true;
+                return false;
             }
-            return false;
-        }
+            else if (acceptTC.IsToggled == false)
+            {
+                Error.Text = "Please accept the terms and conditions to continue.";
+                Error.IsVisible = true;
+                return false;
+            }
 
-        private void submitButton_Clicked(object sender, EventArgs e)
-        {
-
+            return true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Collaboro.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -22,11 +23,14 @@ namespace Collaboro
         /// used to tell if the classBusy switch is true or not
         /// </summary>
         private bool classAtThisTime { get; set; }
-        public bool ClassAtThisTime {
-            get {
+        public bool ClassAtThisTime
+        {
+            get
+            {
                 return classAtThisTime;
             }
-            set {
+            set
+            {
                 classAtThisTime = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("ClassAtThisTime"));
             }
@@ -37,11 +41,14 @@ namespace Collaboro
         /// used to tell if the otherwiseBusy switch is true or not
         /// </summary>
         private bool otherwiseBusy;
-        public bool OtherwiseBusy {
-            get {
+        public bool OtherwiseBusy
+        {
+            get
+            {
                 return otherwiseBusy;
             }
-            set {
+            set
+            {
                 otherwiseBusy = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("OtherwiseBusy"));
             }
@@ -51,11 +58,14 @@ namespace Collaboro
         /// used to tell if the class switch is enabled
         /// </summary>
         private bool classBusyEnabled;
-        public bool ClassBusyEnabled {
-            get {
+        public bool ClassBusyEnabled
+        {
+            get
+            {
                 return classBusyEnabled;
             }
-            set {
+            set
+            {
                 classBusyEnabled = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("ClassBusyEnabled"));
             }
@@ -65,11 +75,14 @@ namespace Collaboro
         /// used to tell if the otherwiseBusy switch should be enabled or not
         /// </summary>
         private bool otherBusyEnabled;
-        public bool OtherBusyEnabled {
-            get {
+        public bool OtherBusyEnabled
+        {
+            get
+            {
                 return otherBusyEnabled;
             }
-            set {
+            set
+            {
                 otherBusyEnabled = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("OtherBusyEnabled"));
             }
@@ -82,7 +95,7 @@ namespace Collaboro
         /// </summary>
         /// <param name="start"></param>
         /// <param name="end"></param>
-        public TimeSlot(int start, int end)
+        public TimeSlot(int start, int end, string day)
         {
             // check if the start time has am or pm behind it and assign it appropriately
             // if you don't want am or pm, just use the following and comment the rest out
@@ -99,6 +112,12 @@ namespace Collaboro
             otherwiseBusy = false;
             otherBusyEnabled = true;
             classBusyEnabled = true;
+
+            // check if this time slot already exists, and do fix the buttons appropriately
+            ExistsInDB(day);
+
+
+
         }   // end of TimeSlot constructor
 
         /// <summary>
@@ -134,7 +153,23 @@ namespace Collaboro
             return correctTime;
         }   // end amOrPmWithTime
 
-    }   // end class TimeSlot
+
+        // figure out the database thingy
+        private async void ExistsInDB(string day)
+        {
+            List<UserAvailability> hourSlot = await App.DatabaseManager.AvailabilityExists(App.AccountEmail, day, StartTime);
+            if (hourSlot.Count > 0 && hourSlot[0].Activity != null && (hourSlot[0].Activity == "Busy" || hourSlot[0].Activity == "Meeting"))
+            {
+                OtherBusyEnabled = true;
+                ClassBusyEnabled = false;
+            }
+            else if (hourSlot.Count > 0)
+            {
+                OtherBusyEnabled = false;
+                ClassBusyEnabled = true;
+            }
+        }
+    }
 
 
-}
+}   // end class TimeSlot

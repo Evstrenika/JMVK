@@ -23,12 +23,13 @@ namespace Collaboro
 
             for (int i = 0; i < 23; i++)
             {
-                mList.Add(new TimeSlot(i, i + 1));
+                mList.Add(new TimeSlot(i, i + 1, "Monday"));
             }
-            mList.Add(new TimeSlot(23, 0));
+            mList.Add(new TimeSlot(23, 0, "Monday"));
             MondayList.ItemsSource = mList;
 
-            //InitialiseAvailability();
+            InitialiseAvailability();
+
         }
 
         private async void InitialiseAvailability()

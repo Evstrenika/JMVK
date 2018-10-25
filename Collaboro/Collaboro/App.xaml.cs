@@ -37,7 +37,7 @@ namespace Collaboro
             if (await DatabaseManager.ReturnNumStudentsAsync() == 0)
             {
                 Student jason = new Student();
-                jason.Email = "j@g.com";
+                jason.Email = "jason@gmail.com";
                 jason.FirstName = "Jason";
                 jason.Surname = "Smith";
                 jason.University = "QUT";
