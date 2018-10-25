@@ -29,6 +29,7 @@ namespace Collaboro
 
         Task RemoveAvailabilityAsync(UserAvailability userAvailability);
 
+
         // Member
         Task AddMemberAsync(Member member);
 
@@ -46,6 +47,8 @@ namespace Collaboro
 
         Task<Student> GetTeamFounder(Group group);
 
+        Task<List<Member>> GetTeamMembers(Group group);
+
 
         // Group
         Task AddGroupAsync(Group group);
@@ -54,6 +57,9 @@ namespace Collaboro
 
         //Task<int> GetCurrentNumberMembers(int ID);
 
+
+        // Meeting
+        Task AddMeetingAsync(Meeting meeting);
 
     }
 }

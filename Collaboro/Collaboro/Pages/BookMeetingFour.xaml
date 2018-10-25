@@ -16,17 +16,15 @@
             <Label Text="Meeting time is:"
                 VerticalOptions="Start" 
                 HorizontalOptions="StartAndExpand" 
-                FontSize="Large"
-                FontAttributes="Bold"/>
+                FontSize="Large"/>
 
             <!-- Meeting time details - Book meeting values received from previous page-->
-            <Label Text="Monday, 3pm - 4pm"
-                VerticalOptions="Start" 
+                <Label VerticalOptions="Start" 
                 HorizontalOptions="StartAndExpand" 
                 FontSize="Large"
-                FontAttributes="Bold"/>
+                x:Name="Chosen"/>
 
-            <!---Location details -->
+                <!---Location details -->
             <Label Text="Location (Optional):" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
 
             <!---Location input field -->
@@ -37,7 +35,8 @@
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="Center"
                     FontSize="Large"
-                    BackgroundColor="AliceBlue"/>
+                    BackgroundColor="AliceBlue"
+                    Clicked="Confirmation"/>
 
         </StackLayout>
         </ScrollView>

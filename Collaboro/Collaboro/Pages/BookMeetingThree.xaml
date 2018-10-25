@@ -4,21 +4,28 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.BookMeetingThree"
              Title="Availabilities">
-    
-    
+
+
     <ContentPage.Content>
-        <ScrollView>
         <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
-            <ListView x:Name="availabilitiesList" Margin="20"> <!--ItemSelected="OnItemSelected"-->
+            <ListView x:Name="availabilitiesList" Margin="20" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                                <Label Text="{Binding Day}" VerticalTextAlignment="Center" />
+                                <Label VerticalTextAlignment="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Day}"/>
+                                            <Span Text=" "/>
+                                            <Span Text="{Binding Time}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -26,6 +33,5 @@
             </ListView>
 
         </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

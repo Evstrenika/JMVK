@@ -81,6 +81,7 @@ namespace Collaboro
             return database.InsertAsync(newUserAvailability);
         }
 
+
         // Member Commands
         public Task AddMemberAsync(Member member)
         {
@@ -123,6 +124,11 @@ namespace Collaboro
             return await database.Table<Student>().Where(i => i.Email == founder.MemberEmail).FirstOrDefaultAsync();
         }
 
+        public Task<List<Member>> GetTeamMembers(Group group)
+        {
+            return database.Table<Member>().Where(i => i.GroupID == group.ID && i.Confirmed == true).ToListAsync();
+        }
+
 
         // Group Commands
         public Task AddGroupAsync(Group group)
@@ -136,29 +142,11 @@ namespace Collaboro
         }
 
 
-        // COMMANDS WE MAY NEED TO MODIFY AND USE LATER
-        /*
-        public Task DeleteTodoItemAsync(string id)
+        // Meeting Commands
+        public Task AddMeetingAsync(Meeting meeting)
         {
-            return database.ExecuteScalarAsync<int>("DELETE FROM TodoItem WHERE ID=?", id); // using SQL statements
-
-            // Alternative using Linq, but which requires the entire item:
-            //return database.DeleteAsync(item);
+            return database.InsertAsync(meeting);
         }
-
-        public Task SaveTodoItemAsync(TodoItem item)
-        {
-            if (item.Id != null)
-            {
-                return database.UpdateAsync(item);
-            }
-            else
-            {
-                item.Id = DateTime.Now.GetHashCode().ToString();
-                return database.InsertAsync(item);
-
-            }
-        }*/
 
     }
 }

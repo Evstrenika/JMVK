@@ -4,11 +4,10 @@
              xmlns:local="clr-namespace:Collaboro"
              x:Class="Collaboro.Pages.BookMeetingTwo"
              Title="Meeting Options">
-    
-    
+
+
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
+        <StackLayout BackgroundColor="LightBlue" Padding="10, 30, 10, 80">
             <StackLayout.BindingContext>
                 <local:ViewModel />
             </StackLayout.BindingContext>
@@ -27,15 +26,18 @@
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand" />
 
-            <Label Text="Minimum Starting Time"
-                   TextColor="Black"
-                   FontSize="Small"
-                   VerticalOptions="CenterAndExpand"/>
-
-            <Picker Title="Minimum Starting Time"
+            <Picker Title="Minimum Starting Time (Optional)"
                 VerticalOptions="CenterAndExpand"
                 x:Name="MinTime">
                 <Picker.Items>
+                    <x:String>12am</x:String>
+                    <x:String>1am</x:String>
+                    <x:String>2am</x:String>
+                    <x:String>3am</x:String>
+                    <x:String>4am</x:String>
+                    <x:String>5am</x:String>
+                    <x:String>6am</x:String>
+                    <x:String>7am</x:String>
                     <x:String>8am</x:String>
                     <x:String>9am</x:String>
                     <x:String>10am</x:String>
@@ -50,18 +52,23 @@
                     <x:String>7pm</x:String>
                     <x:String>8pm</x:String>
                     <x:String>9pm</x:String>
+                    <x:String>10pm</x:String>
+                    <x:String>11pm</x:String>
                 </Picker.Items>
             </Picker>
 
-            <Label Text="Maximum Starting Time"
-                   TextColor="Black"
-                   FontSize="Small"
-                   VerticalOptions="CenterAndExpand"/>
-
-            <Picker Title="Maximum Starting Time"
+            <Picker Title="Maximum Starting Time (Optional)"
                 VerticalOptions="CenterAndExpand"
                 x:Name="MaxTime">
                 <Picker.Items>
+                    <x:String>12am</x:String>
+                    <x:String>1am</x:String>
+                    <x:String>2am</x:String>
+                    <x:String>3am</x:String>
+                    <x:String>4am</x:String>
+                    <x:String>5am</x:String>
+                    <x:String>6am</x:String>
+                    <x:String>7am</x:String>
                     <x:String>8am</x:String>
                     <x:String>9am</x:String>
                     <x:String>10am</x:String>
@@ -76,16 +83,17 @@
                     <x:String>7pm</x:String>
                     <x:String>8pm</x:String>
                     <x:String>9pm</x:String>
+                    <x:String>10pm</x:String>
+                    <x:String>11pm</x:String>
                 </Picker.Items>
             </Picker>
 
             <Button Text="Submit"
-                    x:Name="Submit"
-                    VerticalOptions="CenterAndExpand"
-                    Clicked="OnSubmit"
-                    BackgroundColor="AliceBlue"/>
+                x:Name="Submit"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnSubmit"
+                BackgroundColor="AliceBlue"/>
 
         </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

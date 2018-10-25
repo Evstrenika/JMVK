@@ -110,6 +110,11 @@ namespace Collaboro
             return DbService.GetTeamFounder(group);
         }
 
+        public Task<List<Member>> GetTeamMembers(Group group)
+        {
+            return DbService.GetTeamMembers(group);
+        }
+
 
         // Group Commands
         public Task AddGroupAsync(Group group)
@@ -120,6 +125,13 @@ namespace Collaboro
         public Task<Group> GetGroupAsync(int groupID)
         {
             return DbService.GetGroupAsync(groupID);
+        }
+
+
+        // Meeting Commands
+        public Task AddMeetingAsync(Meeting meeting)
+        {
+            return DbService.AddMeetingAsync(meeting);
         }
     }
 }
