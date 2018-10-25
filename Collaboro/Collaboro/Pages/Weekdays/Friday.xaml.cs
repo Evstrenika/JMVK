@@ -21,7 +21,7 @@ namespace Collaboro
         {
             InitializeComponent();
 
-            // creates all the TimeSlots and places them into cells which become the source for ThursdayList
+            // creates all the TimeSlots and places them into cells which become the source for FridayList
             for (int i = 0; i < 23; i++)
             {
                 fList.Add(new TimeSlot(i, i + 1));
