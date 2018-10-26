@@ -7,51 +7,65 @@
 
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
-            <Label Text="What times are you not available on Thursdays?"/>
-            <Grid Margin="0,5,5,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Label Text=" " Margin="0,2,2,4"/>
-                <Label Text="I have class" Grid.Column="1" FontSize="Small" VerticalOptions="Start"/>
-                <Label Text="I'm busy" Grid.Column="2" FontSize="Small" VerticalOptions="Start" />
-            </Grid>
-            <ListView x:Name="ThursdayList"  BackgroundColor="LightBlue" SelectionMode="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid Margin="0,0,0,10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <StackLayout VerticalOptions="CenterAndExpand">
-                                    <Label Text="{Binding startAndEnd}" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-                                </StackLayout>
-                                <Switch x:Name="classToggle" IsToggled="{Binding ClassAtThisTime}" Grid.Column="1" Toggled="ClassSwitch_Toggled" IsEnabled="{Binding ClassBusyEnabled, Mode=TwoWay}"/>
-                                <Switch x:Name="otherToggle" IsToggled="{Binding OtherwiseBusy}" Grid.Column="2" Toggled="OtherSwitch_Toggled" IsEnabled="{Binding OtherBusyEnabled, Mode=TwoWay}"/>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <!-- <Button x:Name="uploadBtn" Text="Upload" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>-->
-                <Button x:Name="clearBtn" Text="Clear" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Clicked="btnClear_isClicked"/>
-                <Button x:Name="updateBtn" Text="Update" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Clicked="btnUpdate_isClicked"/>
-            </Grid>
-        </StackLayout>
+        <AbsoluteLayout Padding="0">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Label Text="What times are you not available on Thursdays?"/>
+                <Grid Margin="0,5,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text=" " Margin="0,2,2,4"/>
+                    <Label Text="I have class" Grid.Column="1" FontSize="Small" VerticalOptions="Start"/>
+                    <Label Text="I'm busy" Grid.Column="2" FontSize="Small" VerticalOptions="Start" />
+                </Grid>
+                    <ListView x:Name="ThursdayList"  BackgroundColor="LightBlue" SelectionMode="None" HeightRequest="320">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,0,0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding startAndEnd}" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                                    </StackLayout>
+                                    <Switch x:Name="classToggle" IsToggled="{Binding ClassAtThisTime}" Grid.Column="1" Toggled="ClassSwitch_Toggled" IsEnabled="{Binding ClassBusyEnabled, Mode=TwoWay}"/>
+                                    <Switch x:Name="otherToggle" IsToggled="{Binding OtherwiseBusy}" Grid.Column="2" Toggled="OtherSwitch_Toggled" IsEnabled="{Binding OtherBusyEnabled, Mode=TwoWay}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- <Button x:Name="uploadBtn" Text="Upload" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>-->
+                        <Button x:Name="clearBtn" Text="Clear" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Clicked="btnClear_isClicked" HeightRequest="37"/>
+                        <Button x:Name="updateBtn" Text="Update" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Clicked="btnUpdate_isClicked" HeightRequest="37"/>
+                </Grid>
+            </StackLayout>
+
+
+            <!-- Subject Code Entry Pop-up -->
+            <ContentView x:Name="popupSubject" BackgroundColor="#C0808080" IsVisible="false" Padding="10, 0" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HeightRequest="240" WidthRequest="300" Padding="10, 0" BackgroundColor="White">
+                    <Label Margin="20,20,20,0" Text="Please enter the subject code of the class you have at this time." x:Name="SubjectLabel"></Label>
+                    <Entry Margin="20,0,20,0" Placeholder="Subject Code" x:Name="SubjectEntry"></Entry>
+                    <Button Margin="20,0,20,0" Text="Submit" x:Name="SubjectSubmit" Clicked="SubjectSubmitBtn_Clicked"></Button>
+                    <Button Margin="20,0,20,0" Text="Cancel" x:Name="SubjectCancel" Clicked="SubjectCancelBtn_Clicked"></Button>
+                </StackLayout>
+            </ContentView>
+
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -19,6 +19,8 @@ namespace Collaboro
         public string color { get; set; }
         public int index { get; set; }
 
+        public string subjectCode { get; set; }
+
         /// <summary>
         /// used to tell if the classBusy switch is true or not
         /// </summary>

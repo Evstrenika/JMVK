@@ -26,7 +26,8 @@ namespace Collaboro
 
             StaticDatabasePrototyping();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new HomePage("jason@gmail.com"));
             PageNavigationManager.Instance.Navigation = MainPage.Navigation;
 
         }
