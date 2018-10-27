@@ -126,7 +126,7 @@ namespace Collaboro
             
             if (clearAll)
             {
-                dayList = AvailabilityFunctions.ClearButton(dayList);
+                dayList = await AvailabilityFunctions.ClearButton(dayList, dayName);
             }
         }
 
@@ -141,6 +141,10 @@ namespace Collaboro
             dayList = await AvailabilityFunctions.UpdateButton(dayList, dayName);
         }
 
+        /// <summary>
+        /// Submits the subject code entered into the text entry
+        /// Changes the label requesting a valid input if provided input is invalid
+        /// </summary>
         private void SubjectSubmitBtn_Clicked()
         {
             Regex subjectCode = new Regex(@"^[A-Z]{3}[0-9]{3}$");
@@ -156,6 +160,9 @@ namespace Collaboro
             }
         }
 
+        /// <summary>
+        /// Exits the enter subject text input box and unselects the slider chosen
+        /// </summary>
         private void SubjectCancelBtn_Clicked()
         {
             dayList[pendingSubjectIndex].ClassAtThisTime = false;

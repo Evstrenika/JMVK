@@ -11,11 +11,19 @@ using Xamarin.Forms.Xaml;
 namespace Collaboro {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LogInPage : ContentPage {
+
+        /// <summary>
+        /// Create the LoginPage
+        /// </summary>
         public LogInPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Validates the inputs provided. Displays an error if they are invalid
+        /// and logs the user in if they are valid.
+        /// </summary>
         private async void logInButton_Clicked()
         {
             string email = emailAddressEntry.Text;
@@ -38,7 +46,11 @@ namespace Collaboro {
             }
         }
 
-        // returns true if the email fed to it is valid
+        /// <summary>
+        /// Checks if the email provided is valid
+        /// </summary>
+        /// <param name="email">Entered email</param>
+        /// <returns>True if email is valid</returns>
         public bool emailIsValid(string email)
         {
             if(email != null && email.Contains("@"))
@@ -48,10 +60,14 @@ namespace Collaboro {
             return false;
         }
 
-        // returns true if the password fed to it is valid
+        /// <summary>
+        /// Checks if the password provided is valid
+        /// </summary>
+        /// <param name="pass">Entered password</param>
+        /// <returns>True if password is valid</returns>
         public bool passIsValid(string pass)
         {
-            if (pass != null)
+            if (pass != null && pass.Length > 4)
             {
                 return true;
             }

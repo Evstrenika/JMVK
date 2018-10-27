@@ -14,11 +14,18 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FindTeam : ContentPage
     {
+        /// <summary>
+        /// Creates a FindTeam page
+        /// </summary>
         public FindTeam()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Checks the inputs are valid, and if they are not provides a relevant error message
+        /// If inputs are valid, they are sent as parameters to the next step of the process
+        /// </summary>
         private async void OnSubmit()
         {
             Regex subjectCode = new Regex(@"^[A-Z]{3}[0-9]{3}$");
@@ -27,13 +34,12 @@ namespace Collaboro
             bool code = Code.Text != null && subjectCode.IsMatch(Code.Text);
             bool tuteDay = Day.SelectedIndex != -1;
             bool tuteTime = Time.SelectedIndex != -1;
-            bool skillList = Skills.Text == null || skillsList.IsMatch(Skills.Text);
+            //bool skillList = Skills.Text == null || skillsList.IsMatch(Skills.Text);      // Not in this iteration
 
             // Check all of the fields have been entered and are in the correct format
-            if (code && tuteDay && tuteTime && skillList)
+            if (code && tuteDay && tuteTime)
             {
-                string[] list = Regex.Split(Skills.Text, "\r\n");
-                await Navigation.PushAsync(new FindTeamTwo(Code.Text, Day.SelectedItem.ToString(), Time.SelectedItem.ToString(), (int)stepper.Value, list));
+                await Navigation.PushAsync(new FindTeamTwo(Code.Text, Day.SelectedItem.ToString(), Time.SelectedItem.ToString(), (int)stepper.Value));
             }
             else
             {
@@ -50,10 +56,6 @@ namespace Collaboro
                 else if (!tuteTime)
                 {
                     Error.Text = "Please select a tutorial time";
-                }
-                else if (!skillList)
-                {
-                    Error.Text = "Please enter skills in text only and seperate different skills with Enter";
                 }
             }
         }

@@ -13,13 +13,27 @@
                 <local:ViewModel />
             </StackLayout.BindingContext>
 
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="memberList" Margin="20" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                                    <Label VerticalTextAlignment="Center" FontSize="Large" TextColor="Black">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding FirstName}"/>
+                                                <Span Text=" "/>
+                                                <Span Text="{Binding Surname}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-            <!-- https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.listview?view=xamarin-forms -->
-
-        </StackLayout>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

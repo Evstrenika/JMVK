@@ -12,6 +12,9 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        /// <summary>
+        /// Creates the MainPage
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();

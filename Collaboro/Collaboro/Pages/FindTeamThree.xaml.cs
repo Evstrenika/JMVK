@@ -14,30 +14,41 @@ namespace Collaboro.Pages
     public partial class FindTeamThree : ContentPage
     {
         // Variables
-        string email;
         Student student;
         int groupID;
 
-        public FindTeamThree(string email, int groupID)
+        /// <summary>
+        /// Creates the FindTeamThree page and assigns inputs to private variables
+        /// </summary>
+        /// <param name="email">Email of potential teammate</param>
+        /// <param name="groupID">Group in progress ID</param>
+        public FindTeamThree(Student selectedStudent, int groupID)
         {
             InitializeComponent();
-            this.email = email;
+            student = selectedStudent;
             this.groupID = groupID;
         }
 
-        protected async override void OnAppearing()
+        /// <summary>
+        /// When the page is shown, present information relevant to the selected student
+        /// </summary>
+        protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            student = await App.DatabaseManager.ReturnStudentAsync(email);
             Title = student.FirstName + " " + student.Surname;
         }
 
+        /// <summary>
+        /// If the submit button is clicked, the selected user is added to the team.
+        /// The submit button then becomes an undo button.
+        /// If the button is clicked in the undo state, it will remove the invitation to add the team member and
+        /// change back to the invite state
+        /// </summary>
         private async void OnSubmit()
         {
             Member member = new Member();
             member.GroupID = groupID;
-            member.MemberEmail = email;
+            member.MemberEmail = student.Email;
             member.Confirmed = false;
             member.Displayed = false;
 
@@ -50,7 +61,7 @@ namespace Collaboro.Pages
             else
             {
                 SubmitBtn.Text = "Invite to Team";
-                await App.DatabaseManager.RemoveMemberAsync(member);
+                await App.DatabaseManager.RemoveMemberAsync(await App.DatabaseManager.GetMember(member.MemberEmail, member.GroupID));
             }
         }
     }

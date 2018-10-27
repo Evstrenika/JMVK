@@ -21,13 +21,13 @@ namespace Collaboro
         public ICommand LogInButtonClicked { protected set; get; }
         public ICommand SubmitToHome { protected set; get; }
 
-        // pages
-        public LogInPage logInPage;
 
+        /// <summary>
+        /// Holds all of the commands for the PageNavigationManager in a MVVM structure
+        /// </summary>
         public ViewModel()
         {
             // Home Page Commands
-
             navManager = PageNavigationManager.Instance;
 
             FindTeamButtonClick = new Command(() =>
@@ -45,9 +45,13 @@ namespace Collaboro
                 navManager.ShowAvailabilityPage();
             });
 
+            SubmitToHome = new Command(() =>
+            {
+                navManager.SubmitToHome(App.AccountEmail);
+            });
+
 
             // Log In and Sign Up Commands
-
             SignUpButtonClicked = new Command(() => 
             {
                 navManager.ShowSignUpPage();  
@@ -57,10 +61,6 @@ namespace Collaboro
             {
                 navManager.ShowLogInPage();  
             });
-
-            /*SubmitToHome = new Command(() => {
-                navManager.ShowHomePage();
-            });*/
         }
 
     }

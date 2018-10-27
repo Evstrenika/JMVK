@@ -12,41 +12,13 @@ namespace Collaboro.Data
     {
         readonly SQLiteAsyncConnection database;
 
+        /// <summary>
+        /// Creates a connection with a database at a given file location
+        /// </summary>
+        /// <param name="dbPath">File location of Database</param>
         public Database(string dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
-        }
-
-        public Task<List<Student>> GetItemsAsync()
-        {
-            return database.Table<Student>().ToListAsync();
-        }
-
-        public Task<List<Student>> GetItemsNotDoneAsync()
-        {
-            return database.QueryAsync<Student>("SELECT * FROM [Student] WHERE [Done] = 0");
-        }
-
-        public Task<Student> GetItemAsync(string id)
-        {
-            return database.Table<Student>().Where(i => i.Email == id).FirstOrDefaultAsync();
-        }
-
-        public Task<int> SaveItemAsync(Student item)
-        {
-            if (item.Email != null)
-            {
-                return database.UpdateAsync(item);
-            }
-            else
-            {
-                return database.InsertAsync(item);
-            }
-        }
-
-        public Task<int> DeleteItemAsync(Student item)
-        {
-            return database.DeleteAsync(item);
         }
     }
 }

@@ -18,6 +18,13 @@ namespace Collaboro.Pages
         private string maxTime;
         private double length;
 
+        /// <summary>
+        /// Creates a BookMeetingThree page and stores given parameters in private variables
+        /// </summary>
+        /// <param name="selected"></param>
+        /// <param name="length"></param>
+        /// <param name="minTime"></param>
+        /// <param name="maxTime"></param>
         public BookMeetingThree(Group selected, double length, string minTime, string maxTime)
         {
             InitializeComponent();
@@ -27,6 +34,9 @@ namespace Collaboro.Pages
             this.length = length;
         }
 
+        /// <summary>
+        /// Fills the ListView when the page appears
+        /// </summary>
         protected async override void OnAppearing()
         {
             base.OnAppearing();
@@ -34,6 +44,11 @@ namespace Collaboro.Pages
             availabilitiesList.ItemsSource = await FindMutualAvailability();
         }
 
+        /// <summary>
+        /// Finds the times all team members are available and returns them as a list to be
+        /// inserted into the ListView
+        /// </summary>
+        /// <returns>A list of mututally available times</returns>
         private async Task<List<UserAvailability>> FindMutualAvailability()
         {
             string[] days = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
@@ -81,6 +96,11 @@ namespace Collaboro.Pages
             return mutualTimes;
         }
 
+        /// <summary>
+        /// Takes the user to the confirmation page with the selected day and time sent as parameters
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var selectedAvail = e.SelectedItem as UserAvailability;

@@ -19,6 +19,12 @@ namespace Collaboro.Pages
         private string[] times = new string[] {"12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am",
                                             "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"};
 
+        /// <summary>
+        /// Creates the BookMeetingFour page and assigns given paramters to private variables
+        /// </summary>
+        /// <param name="team">The team the meeting is for</param>
+        /// <param name="time">The day and time of the meeting</param>
+        /// <param name="length">The length of the meeting</param>
         public BookMeetingFour(Group team, UserAvailability time, double length)
         {
             InitializeComponent();
@@ -30,6 +36,10 @@ namespace Collaboro.Pages
             Chosen.Text = time.Day + " " + time.Time + " to " + endTime;
         }
 
+        /// <summary>
+        /// Confirms the meeting, creating an availability for each team member and a meeting in the database
+        /// Takes the user back to the home page on completion
+        /// </summary>
         private async void Confirmation()
         {
             // Add meeting to members' availability
@@ -49,6 +59,7 @@ namespace Collaboro.Pages
             meeting.GroupID = team.ID;
             meeting.Day = booking.Day;
             meeting.Time = booking.Time;
+            meeting.Length = length;
             if (locationEntry.Text != "")
             {
                 meeting.Location = locationEntry.Text;

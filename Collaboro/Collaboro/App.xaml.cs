@@ -19,6 +19,10 @@ namespace Collaboro
         public static DBManager DatabaseManager { get; private set; }
         public static string AccountEmail { get; set; }
 
+
+        /// <summary>
+        /// Initialises the app when first loaded
+        /// </summary>
         public App()
         {
             InitializeComponent();
@@ -26,13 +30,22 @@ namespace Collaboro
 
             StaticDatabasePrototyping();
 
-            //MainPage = new NavigationPage(new MainPage());
-            MainPage = new NavigationPage(new HomePage("jason@gmail.com"));
+            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new HomePage("jason@gmail.com"));       // Used to speed up testing
             PageNavigationManager.Instance.Navigation = MainPage.Navigation;
 
         }
 
         
+        /// <summary>
+        /// These commands are run to simulate a cloud database and to allow for testing to occur as a
+        /// local database is used for this iteration.
+        /// Note that both Jason and Frank have a CAB403 class at the same time so this can be used to check 
+        /// that FindMeeting works correctly.
+        /// Login details for both users:
+        /// Frank: frank@gmail.com  333333
+        /// Jason: jason@gmail.com  222222
+        /// </summary>
         private async void StaticDatabasePrototyping()
         {
             if (await DatabaseManager.ReturnNumStudentsAsync() == 0)
@@ -346,18 +359,18 @@ namespace Collaboro
                 await DatabaseManager.AddAvailabilityAsync(booked);
 
                 // Classes
-                busy.Day = "Tuesday";
-                busy.Activity = "IAB330";
-                busy.Time = "11am";
-                await DatabaseManager.AddAvailabilityAsync(busy);
-                busy.Time = "12pm";
-                await DatabaseManager.AddAvailabilityAsync(busy);
-                busy.Day = "Thursday";
-                busy.Activity = "CAB403";
-                busy.Time = "11am";
-                await DatabaseManager.AddAvailabilityAsync(busy);
-                busy.Time = "12pm";
-                await DatabaseManager.AddAvailabilityAsync(busy);
+                booked.Day = "Tuesday";
+                booked.Activity = "IAB330";
+                booked.Time = "11am";
+                await DatabaseManager.AddAvailabilityAsync(booked);
+                booked.Time = "12pm";
+                await DatabaseManager.AddAvailabilityAsync(booked);
+                booked.Day = "Thursday";
+                booked.Activity = "CAB403";
+                booked.Time = "11am";
+                await DatabaseManager.AddAvailabilityAsync(booked);
+                booked.Time = "12pm";
+                await DatabaseManager.AddAvailabilityAsync(booked);
 
                 #endregion
 
@@ -387,17 +400,26 @@ namespace Collaboro
         }
        
 
+        /// <summary>
+        /// Runs when the app is started. No content required here at this time.
+        /// </summary>
         protected override void OnStart()
         {
             // Handle when your app starts
             
         }
 
+        /// <summary>
+        /// Runs when the app is put to sleep. No content required here at this time.
+        /// </summary>
         protected override void OnSleep()
         {
             // Handle when your app sleeps
         }
 
+        /// <summary>
+        /// Runs when the app is resumed. No content required here at this time.
+        /// </summary>
         protected override void OnResume()
         {
             // Handle when your app resumes

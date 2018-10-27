@@ -10,6 +10,10 @@ namespace Collaboro
 		IDataService DbService;
         public List<Student> CurrentItems { get; set; }
 
+        /// <summary>
+        /// Creates a service to handle the commands of the database manager in a MVVM structure
+        /// </summary>
+        /// <param name="service">Service to run manager's commands</param>
 		public DBManager (IDataService service)
 		{
             DbService = service;
@@ -113,6 +117,11 @@ namespace Collaboro
         public Task<List<Member>> GetTeamMembers(Group group)
         {
             return DbService.GetTeamMembers(group);
+        }
+
+        public Task<Member> GetMember(string email, int groupID)
+        {
+            return DbService.GetMember(email, groupID);
         }
 
 

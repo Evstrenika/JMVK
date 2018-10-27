@@ -13,11 +13,19 @@ namespace Collaboro {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUpPage : ContentPage {
 
+        /// <summary>
+        /// Creates the SignUpPage
+        /// </summary>
         public SignUpPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// If the sign up button is clicked, inputs are validated
+        /// If inputs are valid, account is created and user is taken to home screen
+        /// If inputs are valid but email is already in use, user is taken to the login screen
+        /// </summary>
         private async void signUpButton_Clicked()
         {
             var student = (Student)BindingContext;
@@ -38,7 +46,11 @@ namespace Collaboro {
             }
         }
 
-        // checks if everything is valid and returns true if it is
+        /// <summary>
+        /// Checks the provided inputs are valid
+        /// Provides a relevant error message if they are not.
+        /// </summary>
+        /// <returns>True if all inputs are valid</returns>
         public bool IsValid()
         {
             Regex firstNameRegex = new Regex(@"^([A-Z][a-z]+)(-[A-Z][a-z]+)?$");

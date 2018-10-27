@@ -16,6 +16,9 @@ namespace Collaboro
             CreateTables();
         }
 
+        /// <summary>
+        /// Creates tables in the database if they do not already exist
+        /// </summary>
         private void CreateTables()
         {
             database.CreateTableAsync<Student>().Wait();
@@ -58,7 +61,6 @@ namespace Collaboro
         {
             return database.Table<UserAvailability>().Where(i => i.Day == day && i.Time == time && i.Activity == code).ToListAsync();
         }
-
         // something that will add a new time to the table
         public Task AddAvailabilityAsync(UserAvailability userAvailability)
         {
@@ -127,6 +129,11 @@ namespace Collaboro
         public Task<List<Member>> GetTeamMembers(Group group)
         {
             return database.Table<Member>().Where(i => i.GroupID == group.ID && i.Confirmed == true).ToListAsync();
+        }
+
+        public Task<Member> GetMember(string email, int groupID)
+        {
+            return database.Table<Member>().Where(i => i.GroupID == groupID && i.MemberEmail == email).FirstOrDefaultAsync();
         }
 
 

@@ -15,12 +15,19 @@ namespace Collaboro.Pages
     {
         private Group selected;
 
+        /// <summary>
+        /// Creates a BookMeetingTwo page and assigns the group to a private variable
+        /// </summary>
+        /// <param name="group"></param>
         public BookMeetingTwo(Group group)
         {
             InitializeComponent();
             selected = group;
         }
 
+        /// <summary>
+        /// Takes the user to the next part of the booking process with the inputs provided as parameters
+        /// </summary>
         private async void OnSubmit()
         {
             string MinimumTime = (MinTime.SelectedIndex == -1) ? "12am" : MinTime.SelectedItem.ToString();

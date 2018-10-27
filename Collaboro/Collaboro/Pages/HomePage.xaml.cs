@@ -13,6 +13,11 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+        /// <summary>
+        /// Creates the HomePage and stores the provided email in the global AccountEmail variable to keep
+        /// track of who is currently logged in.
+        /// </summary>
+        /// <param name="user">Logged in user</param>
         public HomePage(string user)
         {
             InitializeComponent();
@@ -20,6 +25,10 @@ namespace Collaboro
             App.AccountEmail = user;
         }
 
+        /// <summary>
+        /// When the home page appears, show any pending notifications to
+        /// join a group or be notified someone has joined your group
+        /// </summary>
         protected async override void OnAppearing()
         {
             base.OnAppearing();

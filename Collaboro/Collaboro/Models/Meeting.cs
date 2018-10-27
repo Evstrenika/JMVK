@@ -14,6 +14,7 @@ namespace Collaboro.Models
         public int GroupID { get; set; }    // FK from Group
         public string Day { get; set; }
         public string Time { get; set; }
+        public int Length { get; set; }
         public string Location { get; set; }
     }
 }

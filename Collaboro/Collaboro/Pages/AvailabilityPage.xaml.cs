@@ -12,11 +12,13 @@ namespace Collaboro
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AvailabilityPage : TabbedPage
     {
+        /// <summary>
+        /// Creates an availability page, including loading in the tabs located in the Weekdays folder
+        /// </summary>
         public AvailabilityPage()
         {
             InitializeComponent();
         }
 
-       // addToTable(currentlySelectedTimes)
     }
 }

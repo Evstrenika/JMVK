@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Collaboro
 {
+    /// <summary>
+    /// An interface of the commands required by any service that manages Database Manager commands
+    /// </summary>
 	public interface IDataService
 	{
         // Students
@@ -49,13 +52,13 @@ namespace Collaboro
 
         Task<List<Member>> GetTeamMembers(Group group);
 
+        Task<Member> GetMember(string email, int groupID);
+
 
         // Group
         Task AddGroupAsync(Group group);
 
         Task<Group> GetGroupAsync(int groupID);
-
-        //Task<int> GetCurrentNumberMembers(int ID);
 
 
         // Meeting

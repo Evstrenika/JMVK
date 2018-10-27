@@ -114,9 +114,6 @@ namespace Collaboro
             otherwiseBusy = false;
             otherBusyEnabled = true;
             classBusyEnabled = true;
-
-            // check if this time slot already exists, and do fix the buttons appropriately
-            ExistsInDB(day);
         }   // end of TimeSlot constructor
 
         /// <summary>
@@ -130,6 +127,12 @@ namespace Collaboro
             color = "LightBlue";
         }   // end TimeSlot constructor
 
+
+        /// <summary>
+        /// Takes a numerical value in 24 hour time and converts it to a 12-hour time string
+        /// </summary>
+        /// <param name="time">24-hour time integer</param>
+        /// <returns>12-hour time as string</returns>
         private string amOrPmWithTime(int time)
         {
             string correctTime = "";
@@ -151,23 +154,6 @@ namespace Collaboro
             }
             return correctTime;
         }   // end amOrPmWithTime
-
-
-        // figure out the database thingy
-        private async void ExistsInDB(string day)
-        {
-            List<UserAvailability> hourSlot = await App.DatabaseManager.AvailabilityExists(App.AccountEmail, day, StartTime);
-            if (hourSlot.Count > 0 && hourSlot[0].Activity != null && (hourSlot[0].Activity == "Busy" || hourSlot[0].Activity == "Meeting"))
-            {
-                OtherBusyEnabled = true;
-                ClassBusyEnabled = false;
-            }
-            else if (hourSlot.Count > 0)
-            {
-                OtherBusyEnabled = false;
-                ClassBusyEnabled = true;
-            }
-        }
     }
 
 
