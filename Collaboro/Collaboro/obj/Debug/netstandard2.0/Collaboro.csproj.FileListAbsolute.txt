@@ -120,6 +120,7 @@ C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Colla
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.pdb
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\AvailabilityPage.xaml.g.cs
+C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.deps.json
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.dll
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.pdb
@@ -146,8 +147,11 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Pages\Weekd
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csproj.CoreCompileInputs.cache
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.AssemblyInfoInputs.cache
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.AssemblyInfo.cs
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.dll
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.pdb
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache
-C:\Users\jodie\Documents\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\Collaboro.csprojAssemblyReference.cache
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\NUnit3.TestAdapter.dll
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\NUnit3.TestAdapter.pdb
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\nunit.engine.dll
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\nunit.engine.api.dll
+C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\obj\Debug\netstandard2.0\XamlC.stamp

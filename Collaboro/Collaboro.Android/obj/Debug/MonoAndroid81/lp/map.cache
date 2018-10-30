@@ -1,5 +1,6 @@
 Collaboro
 FormsViewGroup
+nunit.framework
 SQLite-net
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
@@ -31,4 +32,5 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
+Microsoft.Win32.Registry
 System.Reflection.Extensions

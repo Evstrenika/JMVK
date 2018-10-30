@@ -109,6 +109,7 @@ class MonoPackageManager_Resources {
 		"Collaboro.Android.dll",
 		"Collaboro.dll",
 		"FormsViewGroup.dll",
+		"nunit.framework.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
