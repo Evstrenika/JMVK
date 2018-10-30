@@ -4,7 +4,7 @@
              x:Class="Collaboro.Saturday"
              xmlns:local="clr-namespace:Collaboro"
              Title="S">
-
+<!--Saturday-->
 
     <ContentPage.Content>
         <AbsoluteLayout Padding="0">
@@ -49,7 +49,8 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <!-- <Button x:Name="uploadBtn" Text="Upload" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>-->
+                    <!--Buttons-->
+                        <!-- <Button x:Name="uploadBtn" Text="Upload" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"/>-->
                         <Button x:Name="clearBtn" Text="Clear" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" Clicked="btnClear_isClicked" HeightRequest="37"/>
                         <Button x:Name="updateBtn" Text="Update" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Clicked="btnUpdate_isClicked" HeightRequest="37"/>
                 </Grid>
