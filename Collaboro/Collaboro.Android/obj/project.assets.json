@@ -44,6 +44,9 @@
       "NUnit3TestAdapter/3.11.0": {
         "type": "package"
       },
+      "NUnitTestAdapter/2.1.1": {
+        "type": "package"
+      },
       "sqlite-net-pcl/1.5.231": {
         "type": "package",
         "dependencies": {
@@ -445,8 +448,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "NUnit": "3.11.0",
+          "NUnit": "2.6.4",
           "NUnit3TestAdapter": "3.11.0",
+          "NUnitTestAdapter": "2.1.1",
           "Xamarin.Forms": "3.1.0.697729",
           "sqlite-net-pcl": "1.5.231"
         },
@@ -653,6 +657,24 @@
         "build/netcoreapp1.0/nunit.engine.netstandard.dll",
         "nunit3testadapter.3.11.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
+      ]
+    },
+    "NUnitTestAdapter/2.1.1": {
+      "sha512": "jL9tOhRbLugacrDg0KAh3nvHinXnnVNkgiHwmKHtXk61zhpz3UvHzFOdZTfkUz7xf+VRuId1Ns5/nvHyQWaoqA==",
+      "type": "package",
+      "path": "nunittestadapter/2.1.1",
+      "files": [
+        "LICENSE.txt",
+        "nunittestadapter.2.1.1.nupkg.sha512",
+        "nunittestadapter.nuspec",
+        "tools/Mono.Cecil.Mdb.dll",
+        "tools/Mono.Cecil.Pdb.dll",
+        "tools/Mono.Cecil.Rocks.dll",
+        "tools/Mono.Cecil.dll",
+        "tools/NUnit.VisualStudio.TestAdapter.dll",
+        "tools/nunit.core.dll",
+        "tools/nunit.core.interfaces.dll",
+        "tools/nunit.util.dll"
       ]
     },
     "sqlite-net-pcl/1.5.231": {
@@ -1180,6 +1202,7 @@
       "Collaboro >= 1.0.0",
       "NUnit >= 3.11.0",
       "NUnit3TestAdapter >= 3.11.0",
+      "NUnitTestAdapter >= 2.1.1",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
@@ -1232,6 +1255,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "NUnitTestAdapter": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Xamarin.Android.Support.Design": {
             "target": "Package",

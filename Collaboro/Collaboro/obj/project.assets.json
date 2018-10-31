@@ -26,19 +26,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "NUnit/3.11.0": {
+      "NUnit/2.6.4": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "2.0.0"
-        },
         "compile": {
-          "lib/netstandard2.0/nunit.framework.dll": {}
+          "lib/nunit.framework.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/nunit.framework.dll": {}
-        },
-        "build": {
-          "build/NUnit.props": {}
+          "lib/nunit.framework.dll": {}
         }
       },
       "NUnit3TestAdapter/3.11.0": {
@@ -46,6 +40,9 @@
         "build": {
           "build/net35/NUnit3TestAdapter.props": {}
         }
+      },
+      "NUnitTestAdapter/2.1.1": {
+        "type": "package"
       },
       "sqlite-net-pcl/1.5.231": {
         "type": "package",
@@ -247,36 +244,15 @@
         "netstandard.library.nuspec"
       ]
     },
-    "NUnit/3.11.0": {
-      "sha512": "zecrYxUA5p5w8AZ2bvbBbiUIcrQnZAVPrziNMSWMdcOi0D2Oe7yKUNivWPIQMcUwQDHmWtS/ijnD48ubU/eHZQ==",
+    "NUnit/2.6.4": {
+      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
       "type": "package",
-      "path": "nunit/3.11.0",
+      "path": "nunit/2.6.4",
       "files": [
-        ".signature.p7s",
-        "CHANGES.md",
-        "LICENSE.txt",
-        "NOTICES.txt",
-        "build/NUnit.props",
-        "lib/net20/NUnit.System.Linq.dll",
-        "lib/net20/nunit.framework.dll",
-        "lib/net20/nunit.framework.pdb",
-        "lib/net20/nunit.framework.xml",
-        "lib/net35/nunit.framework.dll",
-        "lib/net35/nunit.framework.pdb",
-        "lib/net35/nunit.framework.xml",
-        "lib/net40/nunit.framework.dll",
-        "lib/net40/nunit.framework.pdb",
-        "lib/net40/nunit.framework.xml",
-        "lib/net45/nunit.framework.dll",
-        "lib/net45/nunit.framework.pdb",
-        "lib/net45/nunit.framework.xml",
-        "lib/netstandard1.4/nunit.framework.dll",
-        "lib/netstandard1.4/nunit.framework.pdb",
-        "lib/netstandard1.4/nunit.framework.xml",
-        "lib/netstandard2.0/nunit.framework.dll",
-        "lib/netstandard2.0/nunit.framework.pdb",
-        "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.11.0.nupkg.sha512",
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt",
+        "nunit.2.6.4.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
@@ -298,6 +274,24 @@
         "build/netcoreapp1.0/nunit.engine.netstandard.dll",
         "nunit3testadapter.3.11.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
+      ]
+    },
+    "NUnitTestAdapter/2.1.1": {
+      "sha512": "jL9tOhRbLugacrDg0KAh3nvHinXnnVNkgiHwmKHtXk61zhpz3UvHzFOdZTfkUz7xf+VRuId1Ns5/nvHyQWaoqA==",
+      "type": "package",
+      "path": "nunittestadapter/2.1.1",
+      "files": [
+        "LICENSE.txt",
+        "nunittestadapter.2.1.1.nupkg.sha512",
+        "nunittestadapter.nuspec",
+        "tools/Mono.Cecil.Mdb.dll",
+        "tools/Mono.Cecil.Pdb.dll",
+        "tools/Mono.Cecil.Rocks.dll",
+        "tools/Mono.Cecil.dll",
+        "tools/NUnit.VisualStudio.TestAdapter.dll",
+        "tools/nunit.core.dll",
+        "tools/nunit.core.interfaces.dll",
+        "tools/nunit.util.dll"
       ]
     },
     "sqlite-net-pcl/1.5.231": {
@@ -541,8 +535,9 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "NUnit >= 3.11.0",
+      "NUnit >= 2.6.4",
       "NUnit3TestAdapter >= 3.11.0",
+      "NUnitTestAdapter >= 2.1.1",
       "Xamarin.Forms >= 3.1.0.697729",
       "sqlite-net-pcl >= 1.5.231"
     ]
@@ -596,11 +591,15 @@
           },
           "NUnit": {
             "target": "Package",
-            "version": "[3.11.0, )"
+            "version": "[2.6.4, )"
           },
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "NUnitTestAdapter": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
@@ -620,6 +619,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NUnit 2.6.4' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NUnit",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

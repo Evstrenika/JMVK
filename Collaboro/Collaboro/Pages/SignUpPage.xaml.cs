@@ -33,7 +33,7 @@ namespace Collaboro {
             if (IsValid())
             {
                 // If email already signed up, take to Login page
-                if (App.DatabaseManager.ReturnStudentAsync(emailAddressEntry.Text) != null)
+                if (await App.DatabaseManager.ReturnStudentAsync(emailAddressEntry.Text) != null)
                 {
                     await DisplayAlert("Existing Account", "This email is already registered. Taking you to the login page...", "OK");
                     await Navigation.PushAsync(new LogInPage());
