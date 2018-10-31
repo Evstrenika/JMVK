@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Collaboro.Tests.cs" />
     <Compile Remove="Collaboro\Pages\SelectMembers.xaml.cs" />
     <Compile Remove="Pages\SelectMembers.xaml.cs" />
   </ItemGroup>
@@ -18,10 +17,6 @@
   <ItemGroup>
     <EmbeddedResource Remove="Collaboro\Pages\SelectMembers.xaml" />
     <EmbeddedResource Remove="Pages\SelectMembers.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Collaboro.Tests.cs" />
   </ItemGroup>
 
   <ItemGroup>

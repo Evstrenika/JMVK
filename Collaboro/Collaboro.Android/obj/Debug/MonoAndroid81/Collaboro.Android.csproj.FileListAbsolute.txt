@@ -106,10 +106,3 @@ C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\andr
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro\bin\Debug\netstandard2.0\Collaboro.dll
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Collaboro.Android.pdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\bin\Debug\Collaboro.dll.mdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Collaboro.dll.mdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\nunit.framework.dll.mdb
-C:\Collaboro_stuff\JMVK\Collaboro\Collaboro.Android\obj\Debug\MonoAndroid81\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
