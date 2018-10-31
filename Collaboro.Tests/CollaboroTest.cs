@@ -15,7 +15,7 @@ namespace Collaboro.Tests
         IApp app;
         Platform platform;
 
-        public void Tests(Platform platform)
+        public CollaboroTest(Platform platform)
         {
             this.platform = platform;
         }

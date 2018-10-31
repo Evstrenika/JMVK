@@ -10,13 +10,14 @@ namespace Collaboro.Tests
         {
             if (platform == Platform.Android)
             {
-                return ConfigureApp.Android.StartApp();
+                IApp app = ConfigureApp
+                .Android
+                .ApkFile("../../../AndroidProject/bin/Debug/android.apk")
+                .StartApp();
+                return app;    //ConfigureApp.Android.StartApp()
             }
 
-            IApp app = ConfigureApp
-                .Android
-                .ApkFile("../../../Collaboro.Android/bin/Debug/android.apk")
-                .StartApp();
+            
 
 
             return ConfigureApp.iOS.StartApp();
