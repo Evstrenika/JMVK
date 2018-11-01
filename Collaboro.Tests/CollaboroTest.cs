@@ -111,7 +111,7 @@ namespace Collaboro.Tests
         }   // end of TestSignUpNameBlank()
 
 
-        // name is left blank
+        // surname is left blank
         [Test]
         public void TestSignUpSurnameBlank()
         {

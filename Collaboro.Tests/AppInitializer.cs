@@ -12,7 +12,7 @@ namespace Collaboro.Tests
             {
                 IApp app = ConfigureApp
                 .Android
-                .ApkFile("../../../AndroidProject/bin/Debug/android.apk")
+                .ApkFile("../Collaboro/Collaboro.Android/bin/Debug/com.companyname.Collaboro.apk")
                 .StartApp();
                 return app;    //ConfigureApp.Android.StartApp()
             }

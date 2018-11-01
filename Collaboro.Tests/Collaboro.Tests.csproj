@@ -39,7 +39,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Collaboro.Tests.cs" />
     <Compile Include="CollaboroTest.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
