@@ -1,0 +1,6 @@
+We didn't have time to update our local database to a cloud database due to the amount of time it took to 
+set up the local database. When we first created our project it could work with iOS, Android and UWP but the 
+UWP component does not have a file path. This caused issues with our local database and prevented us from doing 
+the testing we needed. We spent a lot of time looking for a fix to this issue but in the end had to completely
+rebuild our project with only iOS and Android and then bring our old files across to the new project. This caused
+a significant time loss and meant we didn't have extra time left to reimplement the database in a cloud capacity.
